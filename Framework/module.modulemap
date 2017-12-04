@@ -1,0 +1,5 @@
+framework module POLocalizedString {
+    umbrella header "POLocalizedString-umbrella.h"
+    export *
+    module * { export * }
+}

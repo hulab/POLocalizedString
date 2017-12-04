@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+pod 'POLocalizedString', :path => '../.'
+
+target 'Example-objc' do
+
+end
+
+target 'Example-swift' do
+
+end
