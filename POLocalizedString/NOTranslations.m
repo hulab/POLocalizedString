@@ -15,7 +15,7 @@
 	return singular;
 }
 
-- (NSString *)translatePlural:(NSString* )singular plural:(NSString *)plural count:(NSInteger)count context:(NSString *)context {
+- (NSString *)translatePlural:(NSString *)singular plural:(NSString *)plural count:(NSInteger)count context:(NSString *)context {
 	return count == 1 ? singular : plural;
 }
 

@@ -32,13 +32,16 @@
     self.titleLabel.text = POLocalizedStringInBundle(self.bundle, @"Choose number of apples");
     
     self.subTitleLabel.text = nil;
+    
+    NSString *systemVersion = UIDevice.currentDevice.systemVersion;
+    self.versionLabel.text = [NSString stringWithFormat:POLocalizedStringInBundle(self.bundle, @"iOS %s"), systemVersion.UTF8String];
 }
 
 - (IBAction)sliderValueDidChange:(id)sender {
     /// Sub-title with number of apples
-    NSString *format = POLocalizedPluralStringInBundle(self.bundle, @"%@ apple", @"%@ apples", self.slider.value);
+    NSString *format = POLocalizedPluralFormatInBundle(self.bundle, @"%i apple", @"%i apples", self.slider.value);
     
-    self.subTitleLabel.text = [NSString stringWithFormat:format, [NSNumber numberWithInteger:self.slider.value]];
+    self.subTitleLabel.text = [NSString stringWithFormat:format, (int)self.slider.value];
 }
 
 @end

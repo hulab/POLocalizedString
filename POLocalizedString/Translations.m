@@ -50,7 +50,7 @@
 - (NSString *)translate:(NSString *)singular context:(NSString *)context {
     
     NSString *key = [POEntry stringKey:singular context:context];
-	POEntry * entry = _entries[key];
+	POEntry *entry = _entries[key];
 	
 	if(entry != nil && entry.translations.count) {
 		return entry.translations.firstObject;

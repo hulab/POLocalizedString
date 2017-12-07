@@ -63,8 +63,8 @@
 			[self setHeader:arr[0] value:value];
             
 		} else { // parse actual entry
-			NSArray* arr = [self splitString:str separator:@" "];
-			NSString* key, *value;
+			NSArray *arr = [self splitString:str separator:@" "];
+			NSString *key, *value;
 			NSUInteger keylen = 0;
 			unichar c;
 			

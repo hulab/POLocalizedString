@@ -48,6 +48,7 @@
 		9CCFFFA81FD59244007F965D /* muParserInt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF911FD59244007F965D /* muParserInt.cpp */; };
 		9CCFFFA91FD59244007F965D /* muParserTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF921FD59244007F965D /* muParserTest.cpp */; };
 		9CCFFFAA1FD59244007F965D /* muParserTokenReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF931FD59244007F965D /* muParserTokenReader.cpp */; };
+		9CEFAA2A1FD9463F00A5E40F /* POLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFAA291FD9463F00A5E40F /* POLocalizedString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		9CCFFF921FD59244007F965D /* muParserTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = muParserTest.cpp; sourceTree = "<group>"; };
 		9CCFFF931FD59244007F965D /* muParserTokenReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = muParserTokenReader.cpp; sourceTree = "<group>"; };
 		9CCFFFAC1FD593A0007F965D /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		9CEFAA0E1FD6EB4C00A5E40F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9CEFAA291FD9463F00A5E40F /* POLocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POLocalizedString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +157,7 @@
 			children = (
 				9CCFFF4A1FD5903C007F965D /* POLocalizedString.h */,
 				9CCF00461FD5A30C007F965D /* POLocalizedString.m */,
+				9CEFAA291FD9463F00A5E40F /* POLocalizedString.swift */,
 				9CCFFF591FD5903C007F965D /* Translations.h */,
 				9CCFFF5A1FD5903C007F965D /* Translations.m */,
 				9CCFFF4C1FD5903C007F965D /* GettextTranslations.h */,
@@ -194,6 +198,7 @@
 			children = (
 				9CCFFF791FD591A7007F965D /* POLocalizedString.podspec */,
 				9CCFFF781FD591A7007F965D /* README.md */,
+				9CEFAA0E1FD6EB4C00A5E40F /* LICENSE */,
 			);
 			name = Metadata;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				TargetAttributes = {
 					9CCFFF2E1FD58E12007F965D = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					9CCFFF371FD58E12007F965D = {
@@ -392,6 +398,7 @@
 				9CCFFFA81FD59244007F965D /* muParserInt.cpp in Sources */,
 				9CCFFFA71FD59244007F965D /* muParserError.cpp in Sources */,
 				9CCFFFA31FD59244007F965D /* muParserBase.cpp in Sources */,
+				9CEFAA2A1FD9463F00A5E40F /* POLocalizedString.swift in Sources */,
 				9CCFFF631FD5903C007F965D /* NOTranslations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,6 +535,7 @@
 		9CCFFF441FD58E12007F965D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -542,6 +550,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.POLocalizedString;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -549,6 +559,7 @@
 		9CCFFF451FD58E12007F965D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -563,6 +574,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.POLocalizedString;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -570,6 +582,7 @@
 		9CCFFF471FD58E12007F965D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q95SQ3447E;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -583,6 +596,7 @@
 		9CCFFF481FD58E12007F965D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q95SQ3447E;
 				INFOPLIST_FILE = Tests/Info.plist;

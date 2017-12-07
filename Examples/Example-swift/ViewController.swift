@@ -24,18 +24,18 @@ class ViewController: UIViewController {
         bundle = Bundle(identifier: "com.hulab.POLocalizedString.example.l18n")!
         
         /// Title label
-        titleLabel.text = POLocalizedStringInBundle(bundle, "Choose number of apples")
+        titleLabel.text = "Choose number of apples".localized(in: bundle)
         
         subTitleLabel.text = nil
+
+        versionLabel.text = "iOS %s".localized(in: bundle, with: UIDevice.current.systemVersion.c_format)
     }
 
     @IBAction func sliderValueDidChange(_ sender: AnyObject) {
         let count = Int(slider.value)
         
         /// Sub-title with number of apples
-        let format = POLocalizedPluralStringInBundle(bundle, "%@ apple", "%@ apples", count)
-        
-        subTitleLabel.text = String(format: format, NSNumber(value: count))
+        subTitleLabel.text = "%i apple".localized(plural: "%i apples", n: count, in: bundle, with: count)
     }
     
 }

@@ -25,12 +25,12 @@ NSString *POLocalizedStringFromContext(NSString *msgid, NSString *context) {
     return POLocalizedStringFromContextInBundle(NSBundle.mainBundle, msgid, context);
 }
 
-NSString *POLocalizedPluralString(NSString *msgid, NSString *msgid_plural, NSInteger n) {
-    return POLocalizedPluralStringFromContextInBundle(NSBundle.mainBundle, msgid, msgid_plural, n, nil);
+NSString *POLocalizedPluralFormat(NSString *msgid, NSString *msgid_plural, NSInteger n) {
+    return POLocalizedPluralFormatFromContextInBundle(NSBundle.mainBundle, msgid, msgid_plural, n, nil);
 }
 
-NSString *POLocalizedPluralStringFromContext(NSString *msgid, NSString *msgid_plural, NSInteger n, NSString *context) {
-    return POLocalizedPluralStringFromContextInBundle(NSBundle.mainBundle, msgid, msgid_plural, n, context);
+NSString *POLocalizedPluralFormatFromContext(NSString *msgid, NSString *msgid_plural, NSInteger n, NSString *context) {
+    return POLocalizedPluralFormatFromContextInBundle(NSBundle.mainBundle, msgid, msgid_plural, n, context);
 }
 
 NSString *POLocalizedStringInBundle(NSBundle *bundle, NSString *msgid) {
@@ -41,12 +41,12 @@ NSString *POLocalizedStringFromContextInBundle(NSBundle *bundle, NSString *msgid
     return [bundle localizedStringForMsgid:msgid context:context];
 }
 
-NSString *POLocalizedPluralStringInBundle(NSBundle *bundle, NSString *msgid, NSString *msgid_plural, NSInteger n) {
-    return POLocalizedPluralStringFromContextInBundle(bundle, msgid, msgid_plural, n, nil);
+NSString *POLocalizedPluralFormatInBundle(NSBundle *bundle, NSString *msgid, NSString *msgid_plural, NSInteger n) {
+    return POLocalizedPluralFormatFromContextInBundle(bundle, msgid, msgid_plural, n, nil);
 }
 
-NSString *POLocalizedPluralStringFromContextInBundle(NSBundle *bundle, NSString *msgid, NSString *msgid_plural, NSInteger n, NSString *context) {
-    return [bundle localizedStringForMsgid:msgid plural:msgid_plural count:n context:context];
+NSString *POLocalizedPluralFormatFromContextInBundle(NSBundle *bundle, NSString *msgid, NSString *msgid_plural, NSInteger n, NSString *context) {
+    return [bundle localizedFormatForMsgid:msgid plural:msgid_plural count:n context:context];
 }
 
 @interface NSBundle ()
@@ -104,8 +104,50 @@ NSString *POLocalizedPluralStringFromContextInBundle(NSBundle *bundle, NSString 
     return [self.translator translate:msgid context:context];
 }
 
-- (NSString *)localizedStringForMsgid:(NSString *)msgid plural:(NSString *)msgid_plural count:(NSInteger)count context:(nullable NSString *)context {
+- (NSString *)localizedFormatForMsgid:(NSString *)msgid plural:(NSString *)msgid_plural count:(NSInteger)count context:(nullable NSString *)context {
     return [self.translator translatePlural:msgid plural:msgid_plural count:count context:context];
 }
 
 @end
+
+@implementation NSString (POLocalizedString)
+
++ (instancetype)localizedStringWithMsgid:(NSString *)msgid, ... {
+    va_list args;
+    va_start(args, msgid);
+    NSString *str = [[self alloc] initWithMsgid:msgid arguments:args bundle:NSBundle.mainBundle context:nil];
+    va_end(args);
+    return str;
+}
+
++ (instancetype)localizedStringFromContext:(NSString *)context msgid:(NSString *)msgid, ... {
+    va_list args;
+    va_start(args, msgid);
+    NSString *str = [[self alloc] initWithMsgid:msgid arguments:args bundle:NSBundle.mainBundle context:context];
+    va_end(args);
+    return str;
+}
+
++ (instancetype)localizedStringInBundle:(NSBundle *)bundle msgid:(NSString *)msgid, ... {
+    va_list args;
+    va_start(args, msgid);
+    NSString *str = [[self alloc] initWithMsgid:msgid arguments:args bundle:bundle context:nil];
+    va_end(args);
+    return str;
+}
+
++ (instancetype)localizedStringFromContext:(NSString *)context bundle:(NSBundle *)bundle msgid:(NSString *)msgid, ... {
+    va_list args;
+    va_start(args, msgid);
+    NSString *str = [[self alloc] initWithMsgid:msgid arguments:args bundle:bundle context:context];
+    va_end(args);
+    return str;
+}
+
+- (instancetype)initWithMsgid:(NSString *)msgid arguments:(va_list)argList bundle:(NSBundle *)bundle context:(NSString *)context {
+    NSString *format = [bundle.translator translate:msgid context:context];  
+    return [self initWithFormat:format arguments:argList];
+}
+
+@end
+

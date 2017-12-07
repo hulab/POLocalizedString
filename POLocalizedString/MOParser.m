@@ -130,7 +130,7 @@ typedef struct _mo_position {
 		if(originals[i].length == 0) {
 			// @TODO: figure out what it means and why it's here
 			//translation_string = [NSString stringWithUTF8String:buf];
-        }  else { // otherwise build entry
+        } else { // otherwise build entry
             
 			entry = [POEntry new];
 
