@@ -22,23 +22,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0I-ey-fjC">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUr-gG-aWt">
                                 <rect key="frame" x="36" y="258" width="303" height="151"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose number of apples" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6J-Nu-96Z">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose number of apples" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c5-1S-ga7">
                                         <rect key="frame" x="20" y="20" width="263" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qRg-bQ-C0U">
-                                        <rect key="frame" x="18" y="60" width="267" height="31"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Qpr-2H-zT9">
+                                        <rect key="frame" x="18" y="60.5" width="267" height="31"/>
                                         <connections>
-                                            <action selector="sliderValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Rtd-jx-bfw"/>
+                                            <action selector="sliderValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="DgB-CE-1l0"/>
                                         </connections>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{number of apples}" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlD-x5-xFY">
-                                        <rect key="frame" x="20" y="110" width="263" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{number of apples}" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZU-OS-20C">
+                                        <rect key="frame" x="20" y="110.5" width="263" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -46,40 +46,52 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="zlD-x5-xFY" secondAttribute="bottom" constant="20" symbolic="YES" id="4KQ-l3-qdr"/>
-                                    <constraint firstItem="Z6J-Nu-96Z" firstAttribute="top" secondItem="c0I-ey-fjC" secondAttribute="top" constant="20" symbolic="YES" id="EKc-Z1-hg8"/>
-                                    <constraint firstAttribute="trailing" secondItem="Z6J-Nu-96Z" secondAttribute="trailing" constant="20" symbolic="YES" id="FKS-Y5-qes"/>
-                                    <constraint firstItem="qRg-bQ-C0U" firstAttribute="leading" secondItem="c0I-ey-fjC" secondAttribute="leading" constant="20" symbolic="YES" id="ObD-Vs-GAk"/>
-                                    <constraint firstItem="Z6J-Nu-96Z" firstAttribute="leading" secondItem="c0I-ey-fjC" secondAttribute="leading" constant="20" symbolic="YES" id="Pcr-nl-Fs7"/>
-                                    <constraint firstAttribute="trailing" secondItem="qRg-bQ-C0U" secondAttribute="trailing" constant="20" symbolic="YES" id="TWh-DW-jHN"/>
-                                    <constraint firstItem="zlD-x5-xFY" firstAttribute="centerX" secondItem="qRg-bQ-C0U" secondAttribute="centerX" id="YIu-kg-j1B"/>
-                                    <constraint firstItem="zlD-x5-xFY" firstAttribute="leading" secondItem="c0I-ey-fjC" secondAttribute="leading" constant="20" symbolic="YES" id="hBz-js-kFC"/>
-                                    <constraint firstAttribute="trailing" secondItem="zlD-x5-xFY" secondAttribute="trailing" constant="20" symbolic="YES" id="lZc-lO-ram"/>
-                                    <constraint firstItem="qRg-bQ-C0U" firstAttribute="top" secondItem="Z6J-Nu-96Z" secondAttribute="bottom" constant="20" id="m1W-2y-Sf1"/>
-                                    <constraint firstItem="zlD-x5-xFY" firstAttribute="top" secondItem="qRg-bQ-C0U" secondAttribute="bottom" constant="20" id="n1I-Pl-gqZ"/>
+                                    <constraint firstItem="Qpr-2H-zT9" firstAttribute="leading" secondItem="dUr-gG-aWt" secondAttribute="leading" constant="20" symbolic="YES" id="0rq-55-ym6"/>
+                                    <constraint firstItem="Qpr-2H-zT9" firstAttribute="top" secondItem="1c5-1S-ga7" secondAttribute="bottom" constant="20" id="DYL-lc-jc3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qpr-2H-zT9" secondAttribute="trailing" constant="20" symbolic="YES" id="IAx-VB-N6L"/>
+                                    <constraint firstItem="1c5-1S-ga7" firstAttribute="top" secondItem="dUr-gG-aWt" secondAttribute="top" constant="20" symbolic="YES" id="LUF-EJ-SXa"/>
+                                    <constraint firstItem="EZU-OS-20C" firstAttribute="top" secondItem="Qpr-2H-zT9" secondAttribute="bottom" constant="20" id="Mrh-A7-r4v"/>
+                                    <constraint firstAttribute="trailing" secondItem="1c5-1S-ga7" secondAttribute="trailing" constant="20" symbolic="YES" id="Ufh-mt-86q"/>
+                                    <constraint firstItem="1c5-1S-ga7" firstAttribute="leading" secondItem="dUr-gG-aWt" secondAttribute="leading" constant="20" symbolic="YES" id="V1x-me-ehG"/>
+                                    <constraint firstAttribute="bottom" secondItem="EZU-OS-20C" secondAttribute="bottom" constant="20" symbolic="YES" id="bvT-yT-8yR"/>
+                                    <constraint firstAttribute="trailing" secondItem="EZU-OS-20C" secondAttribute="trailing" constant="20" symbolic="YES" id="lJy-Bf-YU4"/>
+                                    <constraint firstItem="EZU-OS-20C" firstAttribute="centerX" secondItem="Qpr-2H-zT9" secondAttribute="centerX" id="o9o-PS-GlV"/>
+                                    <constraint firstItem="EZU-OS-20C" firstAttribute="leading" secondItem="dUr-gG-aWt" secondAttribute="leading" constant="20" symbolic="YES" id="uyu-eD-1A6"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="YIu-kg-j1B"/>
+                                        <exclude reference="o9o-PS-GlV"/>
                                     </mask>
                                 </variation>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI7-kc-Dc8">
+                                <rect key="frame" x="158.5" y="626" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="c0I-ey-fjC" secondAttribute="trailing" constant="20" id="ZMV-Cm-hrk"/>
-                            <constraint firstItem="c0I-ey-fjC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="b3p-Pv-r6F"/>
-                            <constraint firstItem="c0I-ey-fjC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="ctb-pb-z7N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dUr-gG-aWt" secondAttribute="trailing" constant="20" id="0dh-z6-6mz"/>
+                            <constraint firstItem="aI7-kc-Dc8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DVP-lw-nqU"/>
+                            <constraint firstItem="dUr-gG-aWt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kpw-8R-Vxg"/>
+                            <constraint firstItem="aI7-kc-Dc8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Xck-Dy-oC6"/>
+                            <constraint firstItem="aI7-kc-Dc8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dUr-gG-aWt" secondAttribute="bottom" constant="8" symbolic="YES" id="o4G-9b-eBl"/>
+                            <constraint firstItem="dUr-gG-aWt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="pvG-BH-klg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aI7-kc-Dc8" secondAttribute="bottom" constant="20" id="rkQ-on-fbK"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="slider" destination="qRg-bQ-C0U" id="eOf-ih-zsk"/>
-                        <outlet property="subTitleLabel" destination="zlD-x5-xFY" id="0Cx-fm-1lx"/>
-                        <outlet property="titleLabel" destination="Z6J-Nu-96Z" id="0X4-OE-Xtu"/>
+                        <outlet property="slider" destination="Qpr-2H-zT9" id="UqQ-l2-8nA"/>
+                        <outlet property="subTitleLabel" destination="EZU-OS-20C" id="puA-zC-9Dz"/>
+                        <outlet property="titleLabel" destination="1c5-1S-ga7" id="YgN-el-h9P"/>
+                        <outlet property="versionLabel" destination="aI7-kc-Dc8" id="yGv-hs-lPA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="268" y="361"/>
         </scene>
     </scenes>
 </document>

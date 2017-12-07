@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet weak var versionLabel: UILabel!
     
     var bundle: Bundle!
 
@@ -25,7 +26,7 @@ class ViewController: UIViewController {
         /// Title label
         titleLabel.text = POLocalizedStringInBundle(bundle, "Choose number of apples")
         
-        subTitleLabel.text = " "
+        subTitleLabel.text = nil
     }
 
     @IBAction func sliderValueDidChange(_ sender: AnyObject) {

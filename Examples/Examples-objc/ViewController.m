@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subTitleLabel;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
 @property (strong, nonatomic) NSBundle *bundle;
 
@@ -30,7 +31,7 @@
     /// Title label
     self.titleLabel.text = POLocalizedStringInBundle(self.bundle, @"Choose number of apples");
     
-    self.subTitleLabel.text = @" ";
+    self.subTitleLabel.text = nil;
 }
 
 - (IBAction)sliderValueDidChange:(id)sender {

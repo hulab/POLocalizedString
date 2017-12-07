@@ -64,18 +64,29 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI7-kc-Dc8">
+                                <rect key="frame" x="158.5" y="626" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="dUr-gG-aWt" secondAttribute="trailing" constant="20" id="0dh-z6-6mz"/>
+                            <constraint firstItem="aI7-kc-Dc8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DVP-lw-nqU"/>
                             <constraint firstItem="dUr-gG-aWt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kpw-8R-Vxg"/>
+                            <constraint firstItem="aI7-kc-Dc8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Xck-Dy-oC6"/>
+                            <constraint firstItem="aI7-kc-Dc8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dUr-gG-aWt" secondAttribute="bottom" constant="8" symbolic="YES" id="o4G-9b-eBl"/>
                             <constraint firstItem="dUr-gG-aWt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="pvG-BH-klg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aI7-kc-Dc8" secondAttribute="bottom" constant="20" id="rkQ-on-fbK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="slider" destination="Qpr-2H-zT9" id="UqQ-l2-8nA"/>
                         <outlet property="subTitleLabel" destination="EZU-OS-20C" id="puA-zC-9Dz"/>
                         <outlet property="titleLabel" destination="1c5-1S-ga7" id="YgN-el-h9P"/>
+                        <outlet property="versionLabel" destination="aI7-kc-Dc8" id="yGv-hs-lPA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
