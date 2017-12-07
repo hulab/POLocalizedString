@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bundle = Bundle(identifier: "com.hulab.POLocalizedString.example.l18n")!
+        bundle = Bundle(identifier: "com.hulab.POLocalizedString.example.L10n")!
         
         /// Title label
         titleLabel.text = "Choose number of apples".localized(in: bundle)

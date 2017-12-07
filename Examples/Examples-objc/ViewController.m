@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.bundle = [NSBundle bundleWithIdentifier:@"com.hulab.POLocalizedString.example.l18n"];
+    self.bundle = [NSBundle bundleWithIdentifier:@"com.hulab.POLocalizedString.example.L10n"];
     
     /// Title label
     self.titleLabel.text = POLocalizedStringInBundle(self.bundle, @"Choose number of apples");

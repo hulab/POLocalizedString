@@ -20,10 +20,10 @@
 		9CCF00161FD5956C007F965D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CCF000E1FD5956C007F965D /* LaunchScreen.storyboard */; };
 		9CCF00171FD5956C007F965D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CCF00101FD5956C007F965D /* Main.storyboard */; };
 		9CCF00191FD5956C007F965D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF00131FD5956C007F965D /* ViewController.swift */; };
-		9CCF00381FD598B0007F965D /* l18n.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCF00311FD598B0007F965D /* l18n.framework */; };
-		9CCF00391FD598B0007F965D /* l18n.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCF00311FD598B0007F965D /* l18n.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9CCF003D1FD598BD007F965D /* l18n.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCF00311FD598B0007F965D /* l18n.framework */; };
-		9CCF00411FD598E4007F965D /* l18n.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCF00401FD598E4007F965D /* l18n.h */; };
+		9CCF00381FD598B0007F965D /* L10n.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCF00311FD598B0007F965D /* L10n.framework */; };
+		9CCF00391FD598B0007F965D /* L10n.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCF00311FD598B0007F965D /* L10n.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9CCF003D1FD598BD007F965D /* L10n.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCF00311FD598B0007F965D /* L10n.framework */; };
+		9CCF00411FD598E4007F965D /* L10n.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCF00401FD598E4007F965D /* L10n.h */; };
 		9CEFAA1D1FD8094700A5E40F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CEFAA1B1FD8094700A5E40F /* InfoPlist.strings */; };
 		9CEFAA201FD8098E00A5E40F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CEFAA1E1FD8098E00A5E40F /* InfoPlist.strings */; };
 		9CEFAA271FD84D7B00A5E40F /* fr.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9CEFAA251FD84D7B00A5E40F /* fr.mo */; };
@@ -54,7 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9CCF00391FD598B0007F965D /* l18n.framework in Embed Frameworks */,
+				9CCF00391FD598B0007F965D /* L10n.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,9 +74,9 @@
 		9CCF00111FD5956C007F965D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CCF00121FD5956C007F965D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CCF00131FD5956C007F965D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9CCF00311FD598B0007F965D /* l18n.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = l18n.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CCF00311FD598B0007F965D /* L10n.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCF00341FD598B0007F965D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CCF00401FD598E4007F965D /* l18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = l18n.h; sourceTree = "<group>"; };
+		9CCF00401FD598E4007F965D /* L10n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L10n.h; sourceTree = "<group>"; };
 		9CCF00431FD59903007F965D /* ru.po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ru.po; sourceTree = "<group>"; };
 		9CCFFFDC1FD5945A007F965D /* POLocalizedString ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POLocalizedString ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCFFFE21FD594CB007F965D /* POLocalizedString Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POLocalizedString Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49ADFE9683847794CAA01CB2 /* Pods_Example_objc.framework in Frameworks */,
-				9CCF00381FD598B0007F965D /* l18n.framework in Frameworks */,
+				9CCF00381FD598B0007F965D /* L10n.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CCF003D1FD598BD007F965D /* l18n.framework in Frameworks */,
+				9CCF003D1FD598BD007F965D /* L10n.framework in Frameworks */,
 				6D4C9E4251A56D72B7D0B5FC /* Pods_Example_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,7 +164,7 @@
 		9CCF00321FD598B0007F965D /* l18n */ = {
 			isa = PBXGroup;
 			children = (
-				9CCF00401FD598E4007F965D /* l18n.h */,
+				9CCF00401FD598E4007F965D /* L10n.h */,
 				9CEFAA231FD8427400A5E40F /* fr.po */,
 				9CEFAA251FD84D7B00A5E40F /* fr.mo */,
 				9CEFAA261FD84D7B00A5E40F /* ru.mo */,
@@ -191,7 +191,7 @@
 			children = (
 				9CCFFFDC1FD5945A007F965D /* POLocalizedString ObjC.app */,
 				9CCFFFE21FD594CB007F965D /* POLocalizedString Swift.app */,
-				9CCF00311FD598B0007F965D /* l18n.framework */,
+				9CCF00311FD598B0007F965D /* L10n.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,16 +220,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CCF00411FD598E4007F965D /* l18n.h in Headers */,
+				9CCF00411FD598E4007F965D /* L10n.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9CCF00301FD598B0007F965D /* l18n */ = {
+		9CCF00301FD598B0007F965D /* L10n */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CCF003A1FD598B0007F965D /* Build configuration list for PBXNativeTarget "l18n" */;
+			buildConfigurationList = 9CCF003A1FD598B0007F965D /* Build configuration list for PBXNativeTarget "L10n" */;
 			buildPhases = (
 				9CCF002C1FD598B0007F965D /* Sources */,
 				9CCF002D1FD598B0007F965D /* Frameworks */,
@@ -240,9 +240,9 @@
 			);
 			dependencies = (
 			);
-			name = l18n;
+			name = L10n;
 			productName = l18n;
-			productReference = 9CCF00311FD598B0007F965D /* l18n.framework */;
+			productReference = 9CCF00311FD598B0007F965D /* L10n.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9CCFFFCF1FD5945A007F965D /* Example-objc */ = {
@@ -326,7 +326,7 @@
 			targets = (
 				9CCFFFCF1FD5945A007F965D /* Example-objc */,
 				9CCFFFE11FD594CB007F965D /* Example-swift */,
-				9CCF00301FD598B0007F965D /* l18n */,
+				9CCF00301FD598B0007F965D /* L10n */,
 			);
 		};
 /* End PBXProject section */
@@ -502,12 +502,12 @@
 /* Begin PBXTargetDependency section */
 		9CCF00371FD598B0007F965D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9CCF00301FD598B0007F965D /* l18n */;
+			target = 9CCF00301FD598B0007F965D /* L10n */;
 			targetProxy = 9CCF00361FD598B0007F965D /* PBXContainerItemProxy */;
 		};
 		9CCF003F1FD598CD007F965D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9CCF00301FD598B0007F965D /* l18n */;
+			target = 9CCF00301FD598B0007F965D /* L10n */;
 			targetProxy = 9CCF003E1FD598CD007F965D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -580,7 +580,7 @@
 				INFOPLIST_FILE = l18n/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.POLocalizedString.example.l18n;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.POLocalizedString.example.L10n;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -603,7 +603,7 @@
 				INFOPLIST_FILE = l18n/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.POLocalizedString.example.l18n;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.POLocalizedString.example.L10n;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -783,7 +783,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9CCF003A1FD598B0007F965D /* Build configuration list for PBXNativeTarget "l18n" */ = {
+		9CCF003A1FD598B0007F965D /* Build configuration list for PBXNativeTarget "L10n" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9CCF003B1FD598B0007F965D /* Debug */,
