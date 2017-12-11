@@ -68,7 +68,7 @@
             _pluralRule = nil;
 		}
 		
-		NSLog(@"nplurals: %@. rule: %@", nplurals, rule);
+        //NSLog(@"nplurals: %@. rule: %@", nplurals, rule);
 	}
 }
 

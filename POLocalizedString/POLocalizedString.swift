@@ -1,10 +1,25 @@
+// POLocalizedString.swift
 //
-//  POLocalizedString.swift
-//  POLocalizedString
+// Created by Maxime Epain on 07/12/2017.
+// Copyright © 2017 Hulab. All rights reserved.
 //
-//  Created by Maxime Epain on 07/12/2017.
-//  Copyright © 2017 Hulab. All rights reserved.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
 import Foundation
 
@@ -20,12 +35,12 @@ public extension String {
         return (self as NSString).unicode
     }
     
-    public func localized() -> String {
-        return Bundle.main.localizedString(forMsgid: self, context: nil)
+    public var localized: String {
+        return Bundle.localized.localizedString(forMsgid: self, context: nil)
     }
     
     public func localized(from context: String) -> String {
-        return Bundle.main.localizedString(forMsgid: self, context: context)
+        return Bundle.localized.localizedString(forMsgid: self, context: context)
     }
     
     public func localized(in bundle: Bundle) -> String {
@@ -37,14 +52,14 @@ public extension String {
     }
     
     public func localized(with arguments: CVarArg...) -> String {
-        let format = Bundle.main.localizedString(forMsgid: self, context: nil)
+        let format = Bundle.localized.localizedString(forMsgid: self, context: nil)
         return withVaList(arguments) {
             NSString(format: format, arguments: $0)
         } as String
     }
     
     public func localized(from context: String, with arguments: CVarArg...) -> String {
-        let format = Bundle.main.localizedString(forMsgid: self, context: context)
+        let format = Bundle.localized.localizedString(forMsgid: self, context: context)
         return withVaList(arguments) {
             NSString(format: format, arguments: $0)
         } as String
@@ -65,14 +80,14 @@ public extension String {
     }
     
     public func localized(plural: String, n: Int, with arguments: CVarArg...) -> String {
-        let format = Bundle.main.localizedFormat(forMsgid: self, plural: plural, count: n, context: nil)
+        let format = Bundle.localized.localizedFormat(forMsgid: self, plural: plural, count: n, context: nil)
         return withVaList(arguments) {
             NSString(format: format, arguments: $0)
         } as String
     }
     
     public func localized(plural: String, n: Int, from context: String, with arguments: CVarArg...) -> String {
-        let format = Bundle.main.localizedFormat(forMsgid: self, plural: plural, count: n, context: context)
+        let format = Bundle.localized.localizedFormat(forMsgid: self, plural: plural, count: n, context: context)
         return withVaList(arguments) {
             NSString(format: format, arguments: $0)
         } as String

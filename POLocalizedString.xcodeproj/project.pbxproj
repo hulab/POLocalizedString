@@ -7,22 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0E7F181FDE919E003AECCE /* template.pot in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F141FDE919D003AECCE /* template.pot */; };
+		9C0E7F191FDE919E003AECCE /* es_ES.po in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F151FDE919D003AECCE /* es_ES.po */; };
+		9C0E7F1A1FDE919E003AECCE /* af.po in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F161FDE919D003AECCE /* af.po */; };
+		9C0E7F1B1FDE919E003AECCE /* kw.po in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F171FDE919E003AECCE /* kw.po */; };
+		9C0E7F1F1FDE91A9003AECCE /* kw.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F1C1FDE91A9003AECCE /* kw.mo */; };
+		9C0E7F201FDE91A9003AECCE /* es_ES.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F1D1FDE91A9003AECCE /* es_ES.mo */; };
+		9C0E7F211FDE91A9003AECCE /* af.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F1E1FDE91A9003AECCE /* af.mo */; };
 		9CCF00471FD5A30C007F965D /* POLocalizedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF00461FD5A30C007F965D /* POLocalizedString.m */; };
 		9CCFFF391FD58E12007F965D /* POLocalizedString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCFFF2F1FD58E12007F965D /* POLocalizedString.framework */; };
 		9CCFFF5C1FD5903C007F965D /* POLocalizedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4A1FD5903C007F965D /* POLocalizedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9CCFFF5E1FD5903C007F965D /* GettextTranslations.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4C1FD5903C007F965D /* GettextTranslations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CCFFF5E1FD5903C007F965D /* GettextTranslations.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4C1FD5903C007F965D /* GettextTranslations.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CCFFF5F1FD5903C007F965D /* GettextTranslations.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF4D1FD5903C007F965D /* GettextTranslations.mm */; };
-		9CCFFF601FD5903C007F965D /* MOParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4E1FD5903C007F965D /* MOParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CCFFF601FD5903C007F965D /* MOParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4E1FD5903C007F965D /* MOParser.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CCFFF611FD5903C007F965D /* MOParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF4F1FD5903C007F965D /* MOParser.m */; };
-		9CCFFF621FD5903C007F965D /* NOTranslations.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF501FD5903C007F965D /* NOTranslations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CCFFF621FD5903C007F965D /* NOTranslations.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF501FD5903C007F965D /* NOTranslations.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CCFFF631FD5903C007F965D /* NOTranslations.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF511FD5903C007F965D /* NOTranslations.m */; };
-		9CCFFF651FD5903C007F965D /* POParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF531FD5903C007F965D /* POParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CCFFF651FD5903C007F965D /* POParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF531FD5903C007F965D /* POParser.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CCFFF661FD5903C007F965D /* POParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF541FD5903C007F965D /* POParser.m */; };
-		9CCFFF691FD5903C007F965D /* POEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF571FD5903C007F965D /* POEntry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CCFFF691FD5903C007F965D /* POEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF571FD5903C007F965D /* POEntry.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CCFFF6A1FD5903C007F965D /* POEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF581FD5903C007F965D /* POEntry.m */; };
-		9CCFFF6B1FD5903C007F965D /* Translations.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF591FD5903C007F965D /* Translations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CCFFF6B1FD5903C007F965D /* Translations.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF591FD5903C007F965D /* Translations.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CCFFF6C1FD5903C007F965D /* Translations.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF5A1FD5903C007F965D /* Translations.m */; };
-		9CCFFF741FD59059007F965D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CCFFF721FD59059007F965D /* Info.plist */; };
 		9CCFFF751FD59059007F965D /* POLocalizedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF731FD59059007F965D /* POLocalizedStringTests.m */; };
 		9CCFFF761FD590C3007F965D /* POLocalizedString-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF701FD59049007F965D /* POLocalizedString-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CCFFF941FD59244007F965D /* muParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7C1FD59244007F965D /* muParser.h */; };
@@ -62,6 +68,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C0E7F141FDE919D003AECCE /* template.pot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.pot; sourceTree = "<group>"; };
+		9C0E7F151FDE919D003AECCE /* es_ES.po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = es_ES.po; sourceTree = "<group>"; };
+		9C0E7F161FDE919D003AECCE /* af.po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = af.po; sourceTree = "<group>"; };
+		9C0E7F171FDE919E003AECCE /* kw.po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kw.po; sourceTree = "<group>"; };
+		9C0E7F1C1FDE91A9003AECCE /* kw.mo */ = {isa = PBXFileReference; lastKnownFileType = file; path = kw.mo; sourceTree = "<group>"; };
+		9C0E7F1D1FDE91A9003AECCE /* es_ES.mo */ = {isa = PBXFileReference; lastKnownFileType = file; path = es_ES.mo; sourceTree = "<group>"; };
+		9C0E7F1E1FDE91A9003AECCE /* af.mo */ = {isa = PBXFileReference; lastKnownFileType = file; path = af.mo; sourceTree = "<group>"; };
 		9CCF00461FD5A30C007F965D /* POLocalizedString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POLocalizedString.m; sourceTree = "<group>"; };
 		9CCFFF2F1FD58E12007F965D /* POLocalizedString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = POLocalizedString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCFFF381FD58E12007F965D /* POLocalizedStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POLocalizedStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +201,13 @@
 			isa = PBXGroup;
 			children = (
 				9CCFFF721FD59059007F965D /* Info.plist */,
+				9C0E7F141FDE919D003AECCE /* template.pot */,
+				9C0E7F161FDE919D003AECCE /* af.po */,
+				9C0E7F1E1FDE91A9003AECCE /* af.mo */,
+				9C0E7F151FDE919D003AECCE /* es_ES.po */,
+				9C0E7F1D1FDE91A9003AECCE /* es_ES.mo */,
+				9C0E7F171FDE919E003AECCE /* kw.po */,
+				9C0E7F1C1FDE91A9003AECCE /* kw.mo */,
 				9CCFFF731FD59059007F965D /* POLocalizedStringTests.m */,
 			);
 			path = Tests;
@@ -264,22 +284,22 @@
 				9CCFFF981FD59244007F965D /* muParserDef.h in Headers */,
 				9CCFFF9D1FD59244007F965D /* muParserStack.h in Headers */,
 				9CCFFF9A1FD59244007F965D /* muParserError.h in Headers */,
-				9CCFFF5E1FD5903C007F965D /* GettextTranslations.h in Headers */,
 				9CCFFF9E1FD59244007F965D /* muParserTemplateMagic.h in Headers */,
+				9CCFFF5E1FD5903C007F965D /* GettextTranslations.h in Headers */,
 				9CCFFF691FD5903C007F965D /* POEntry.h in Headers */,
+				9CCFFF621FD5903C007F965D /* NOTranslations.h in Headers */,
+				9CCFFF651FD5903C007F965D /* POParser.h in Headers */,
+				9CCFFF601FD5903C007F965D /* MOParser.h in Headers */,
+				9CCFFF6B1FD5903C007F965D /* Translations.h in Headers */,
 				9CCFFF941FD59244007F965D /* muParser.h in Headers */,
 				9CCFFF5C1FD5903C007F965D /* POLocalizedString.h in Headers */,
-				9CCFFF621FD5903C007F965D /* NOTranslations.h in Headers */,
 				9CCFFF951FD59244007F965D /* muParserBase.h in Headers */,
 				9CCFFF961FD59244007F965D /* muParserBytecode.h in Headers */,
-				9CCFFF651FD5903C007F965D /* POParser.h in Headers */,
 				9CCFFF991FD59244007F965D /* muParserDLL.h in Headers */,
-				9CCFFF601FD5903C007F965D /* MOParser.h in Headers */,
 				9CCFFFA11FD59244007F965D /* muParserTokenReader.h in Headers */,
 				9CCFFF9F1FD59244007F965D /* muParserTest.h in Headers */,
 				9CCFFF971FD59244007F965D /* muParserCallback.h in Headers */,
 				9CCFFFA01FD59244007F965D /* muParserToken.h in Headers */,
-				9CCFFF6B1FD5903C007F965D /* Translations.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +348,7 @@
 		9CCFFF261FD58E12007F965D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Hulab;
 				TargetAttributes = {
 					9CCFFF2E1FD58E12007F965D = {
@@ -372,7 +392,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CCFFF741FD59059007F965D /* Info.plist in Resources */,
+				9C0E7F211FDE91A9003AECCE /* af.mo in Resources */,
+				9C0E7F1B1FDE919E003AECCE /* kw.po in Resources */,
+				9C0E7F1F1FDE91A9003AECCE /* kw.mo in Resources */,
+				9C0E7F1A1FDE919E003AECCE /* af.po in Resources */,
+				9C0E7F201FDE91A9003AECCE /* es_ES.mo in Resources */,
+				9C0E7F191FDE919E003AECCE /* es_ES.po in Resources */,
+				9C0E7F181FDE919E003AECCE /* template.pot in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +552,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

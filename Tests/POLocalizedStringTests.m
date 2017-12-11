@@ -7,16 +7,21 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <POLocalizedString/POLocalizedString.h>
 
 @interface POLocalizedStringTests : XCTestCase
-
+@property (nonatomic, weak) NSBundle *bundle;
 @end
 
 @implementation POLocalizedStringTests
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    self.bundle = [NSBundle bundleForClass:self.class];
+    self.bundle.language = @"af";
+    
+    NSBundle.localizedBundle = self.bundle;
 }
 
 - (void)tearDown {
@@ -24,9 +29,24 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testMsgid {
+    NSString *str = POLocalizedString(@"The URL is not valid and cannot be loaded.");
+    
+    XCTAssertEqualObjects(str, @"Die URL is ongeldig en kan nie gelaai word nie.");
+}
+
+- (void)testAsciiFormat {
+    NSString *format = POLocalizedString(@"Firefox can't find the server at %s.");
+    NSString *str = [NSString stringWithFormat:format, @"location".ascii];
+    
+    XCTAssertEqualObjects(str, @"Firefox kan nie die bediener vind by location nie.");
+}
+
+- (void)testUnicodeFormat {
+    NSString *format = POLocalizedString(@"Firefox can't find the file at %S.");
+    NSString *str = [NSString stringWithFormat:format, @"location".unicode];
+    
+    XCTAssertEqualObjects(str, @"Firefox kan nie 'n lêer vind by location nie.");
 }
 
 - (void)testPerformanceExample {
