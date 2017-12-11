@@ -29,6 +29,8 @@
 
 - (NSString *)encodePO;
 
+- (NSArray<NSString *> *)splitByString:(NSString *)separator;
+
 - (NSString *)stringByRemovingQuotes;
 
 @end
@@ -44,18 +46,16 @@
     }
 
     Gettext *gettext = [[Gettext alloc] init];
-	NSArray *split = [content componentsSeparatedByString:@"\n\n"];
+	NSArray *paragraphs = [content componentsSeparatedByString:@"\n\n"];
 
-	for (NSString *str in split) {
+	for (NSString *paragraph in paragraphs) {
         
-        NSArray *strings = [str componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        NSArray *lines = [paragraph componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
         
         POEntry *entry = nil;
-        for (NSString *s in strings) {
+        for (NSString *line in lines) {
             
-            NSString *str = s;
-            
-            if(!str.length) {
+            if(!line.length) {
                 continue;
             }
             
@@ -64,10 +64,10 @@
             }
             
             // parse header
-            if([str characterAtIndex:0] == '"' && [str characterAtIndex:str.length - 1] == '"') {
+            if([line characterAtIndex:0] == '"' && [line characterAtIndex:line.length - 1] == '"') {
                 
-                str = [str substringWithRange:NSMakeRange(1, str.length - 2)];
-                NSArray<NSString *> *arr = [str componentsSeparatedByString:@":"];
+                NSString *comment = [line substringWithRange:NSMakeRange(1, line.length - 2)];
+                NSArray<NSString *> *arr = [comment splitByString:@":"];
                 
                 if(arr.count < 2)
                     continue;
@@ -77,7 +77,7 @@
                 [gettext setHeader:arr[0] value:value];
                 
             } else { // parse actual entry
-                NSArray *arr = [str componentsSeparatedByString:@" "];
+                NSArray *arr = [line splitByString:@" "];
                 NSString *key, *value;
                 NSUInteger keylen = 0;
                 unichar c;
@@ -90,10 +90,10 @@
                 
                 keylen = key.length;
                 
-                if([str characterAtIndex:0] == '#') { // #. section
+                if([line characterAtIndex:0] == '#') { // #. section
                     // don't use "key" here because of #_ (space) format
                     // for translator comments
-                    c = [str characterAtIndex:1];
+                    c = [line characterAtIndex:1];
                     
                     switch(c)  {
                             // reference
@@ -171,6 +171,23 @@
     string = [string stringByReplacingOccurrencesOfString:@"\"" withString:@"\\\""];
     
     return string;
+}
+
+- (NSArray<NSString *> *)splitByString:(NSString *)separator {
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    NSScanner *scan = [NSScanner scannerWithString:self];
+    NSString *token;
+    
+    if([scan scanUpToString:separator intoString:&token]) {
+        NSUInteger pos = scan.scanLocation + 1;
+        [array addObject:token];
+        
+        if(pos < self.length) {
+            [array addObject:[self substringFromIndex:pos]];
+        }
+    }
+    
+    return [NSArray arrayWithArray:array];
 }
 
 - (NSString *)stringByRemovingQuotes {

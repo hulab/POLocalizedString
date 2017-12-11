@@ -62,24 +62,22 @@
 	
 	[description appendString:@"translations:\n"];
      
-	NSUInteger i = 0;
-	for (NSString * tr in self.translations) {
-        [description appendFormat:@"[%lu] %@\n", (unsigned long)i++, tr];
+	
+    for (NSUInteger i = 0; i < self.translations.count; ++i) {
+        [description appendFormat:@"[%lu] %@\n", i++, self.translations[i]];
 	}
 	
     [description appendString:@"references:\n"];
     
-	i = 0;
-	for (NSString * ref in self.references) {
-        [description appendFormat:@"[%lu] %@\n", (unsigned long)i++, ref];
-	}
-	
+    for (NSUInteger i = 0; i < self.references.count; ++i) {
+        [description appendFormat:@"[%lu] %@\n", i++, self.references[i]];
+    }
+    
     [description appendString:@"flags:\n"];
     
-	i = 0;
-	for (NSString *flag in self.flags) {
-        [description appendFormat:@"[%lu] %@\n", (unsigned long)i++, flag];
-	}
+    for (NSUInteger i = 0; i < self.flags.count; ++i) {
+        [description appendFormat:@"[%lu] %@\n", i++, self.flags[i]];
+    }
 	
     [description appendString:@"--"];
     
