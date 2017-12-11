@@ -1,10 +1,25 @@
+// POEntry.m
 //
-//  POEntry.m
-//  pomo
+// Created by pronebird on 3/28/11.
+// Copyright 2011 Andrej Mihajlov. All rights reserved.
 //
-//  Created by pronebird on 3/28/11.
-//  Copyright 2011 Andrej Mihajlov. All rights reserved.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
 #import "POEntry.h"
 
@@ -13,10 +28,9 @@
 
 - (id)init {
 	if(self = [super init]) {
-		self.is_plural = NO;
 		self.context = nil;
-		self.singular = nil;
-		self.plural = nil;
+		self.msgid = nil;
+		self.msgid_plural = nil;
 		self.translations = [NSMutableArray new];
 		self.translator_comments = nil;
 		self.extracted_comments = nil;
@@ -28,42 +42,48 @@
 
 
 - (NSString *)key {
-	return [POEntry stringKey:self.singular context:self.context];
+	return [POEntry keyWithMsgid:self.msgid context:self.context];
 }
 
-+ (NSString *)stringKey:(NSString *)singular {
-	return [self stringKey:singular context:nil];
-}
-
-+ (NSString *)stringKey:(NSString *)singular context:(NSString *)context {
-	if(singular == nil)
++ (NSString *)keyWithMsgid:(NSString *)msgid context:(NSString *)context {
+    if (msgid == nil) {
 		return nil;
+    }
 	
-	return (context == nil || [context isEqualToString:@""]) ? singular : [NSString stringWithFormat:@"%@%c%@", context, '\4', singular];	
+    if (context == nil || [context isEqualToString:@""]) {
+        return msgid;
+    }
+    
+	return [NSString stringWithFormat:@"%@%c%@", context, '\4', msgid];
 }
 
-- (void)debugPrint {
-	NSLog(@"new entry\nsingular: %@\nplural: %@\nis_plural: %d\ntranslator comments:%@\n", self.singular, self.plural, self.is_plural, self.translator_comments);
+- (NSString *)description {
+    NSMutableString *description = [NSMutableString stringWithFormat:@"new entry\nsingular: %@\nplural: %@\ntranslator comments:%@\n", self.msgid, self.msgid_plural, self.translator_comments];
 	
-	NSLog(@"translations:\n");
+	[description appendString:@"translations:\n"];
+     
 	NSUInteger i = 0;
-	for(NSString * tr in self.translations) {
-		NSLog(@"[%lu] %@\n", (unsigned long)i++, tr);
+	for (NSString * tr in self.translations) {
+        [description appendFormat:@"[%lu] %@\n", (unsigned long)i++, tr];
 	}
 	
-	NSLog(@"references:\n");
+    [description appendString:@"references:\n"];
+    
 	i = 0;
-	for(NSString * ref in self.references) {
-		NSLog(@"[%lu] %@\n", (unsigned long)i++, ref);
+	for (NSString * ref in self.references) {
+        [description appendFormat:@"[%lu] %@\n", (unsigned long)i++, ref];
 	}
 	
-	NSLog(@"flags:\n");
+    [description appendString:@"flags:\n"];
+    
 	i = 0;
-	for(NSString *flag in self.flags) {
-		NSLog(@"[%lu] %@\n", (unsigned long)i++, flag);
+	for (NSString *flag in self.flags) {
+        [description appendFormat:@"[%lu] %@\n", (unsigned long)i++, flag];
 	}
 	
-	NSLog(@"--");
+    [description appendString:@"--"];
+    
+     return description;
 }
 
 @end

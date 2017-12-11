@@ -27,9 +27,7 @@
 
 #import "POLocalizedString.h"
 
-#import "Translations.h"
-#import "GettextTranslations.h"
-#import "NOTranslations.h"
+#import "Gettext.h"
 #import "POParser.h"
 #import "MOParser.h"
 
@@ -67,7 +65,7 @@ NSString *POLocalizedPluralFormatFromContextInBundle(NSBundle *bundle, NSString 
 
 @interface NSBundle ()
 
-@property (nonatomic, strong) Translations *translator;
+@property (nonatomic, strong) Gettext *gettext;
 
 @end
 
@@ -105,14 +103,14 @@ static NSBundle *localizedBundle = nil;
 - (void)setLanguage:(NSString *)language {
     objc_setAssociatedObject(self, @selector(language), language, OBJC_ASSOCIATION_RETAIN);
     
-    // Reset translator
-    objc_setAssociatedObject(self, @selector(translator), nil, OBJC_ASSOCIATION_RETAIN);
+    // Reset gettext
+    objc_setAssociatedObject(self, @selector(gettext), nil, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (Translations *)translator {
-    Translations *translator = objc_getAssociatedObject(self, @selector(translator));
+- (Gettext *)gettext {
+    Gettext *gettext = objc_getAssociatedObject(self, @selector(gettext));
     
-    if (!translator) {
+    if (!gettext) {
         
         NSString *language = self.language;
 
@@ -122,37 +120,35 @@ static NSBundle *localizedBundle = nil;
         NSFileManager *fileManager = [NSFileManager defaultManager];
         
         if([fileManager fileExistsAtPath:path]) {
-            MOParser *parser = [MOParser new];
-            [parser importFileAtPath:path];
+            gettext = [MOParser loadFile:path];
             
-            objc_setAssociatedObject(self, @selector(translator), parser, OBJC_ASSOCIATION_RETAIN);
-            return parser;
+            objc_setAssociatedObject(self, @selector(gettext), gettext, OBJC_ASSOCIATION_RETAIN);
+            return gettext;
         }
         
         filename = [NSString stringWithFormat:@"%@.%@", language, @"po"];
         path = [self.bundlePath stringByAppendingPathComponent:filename];
         
         if([fileManager fileExistsAtPath:path]) {
-            POParser *parser = [POParser new];
-            [parser importFileAtPath:path];
+            gettext = [POParser loadFile:path];
             
-            objc_setAssociatedObject(self, @selector(translator), parser, OBJC_ASSOCIATION_RETAIN);
-            return parser;
+            objc_setAssociatedObject(self, @selector(gettext), gettext, OBJC_ASSOCIATION_RETAIN);
+            return gettext;
         }
         
-        translator = [NOTranslations new];
-        objc_setAssociatedObject(self, @selector(translator), translator, OBJC_ASSOCIATION_RETAIN);
+        gettext = [[Gettext alloc] init];
+        objc_setAssociatedObject(self, @selector(gettext), gettext, OBJC_ASSOCIATION_RETAIN);
     }
     
-    return translator;
+    return gettext;
 }
 
 - (NSString *)localizedStringForMsgid:(NSString *)msgid context:(nullable NSString *)context {
-    return [self.translator translate:msgid context:context];
+    return [self.gettext stringWithMsgid:msgid context:context];
 }
 
 - (NSString *)localizedFormatForMsgid:(NSString *)msgid plural:(NSString *)msgid_plural count:(NSInteger)count context:(nullable NSString *)context {
-    return [self.translator translatePlural:msgid plural:msgid_plural count:count context:context];
+    return [self.gettext stringWithMsgid:msgid plural:msgid_plural count:count context:context];
 }
 
 @end
@@ -200,7 +196,7 @@ static NSBundle *localizedBundle = nil;
 }
 
 - (instancetype)initWithMsgid:(NSString *)msgid arguments:(va_list)argList bundle:(NSBundle *)bundle context:(NSString *)context {
-    NSString *format = [bundle.translator translate:msgid context:context];  
+    NSString *format = [bundle.gettext stringWithMsgid:msgid context:context];
     return [self initWithFormat:format arguments:argList];
 }
 

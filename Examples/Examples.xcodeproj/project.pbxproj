@@ -24,9 +24,9 @@
 		9CCF00391FD598B0007F965D /* L10n.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCF00311FD598B0007F965D /* L10n.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9CCF003D1FD598BD007F965D /* L10n.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCF00311FD598B0007F965D /* L10n.framework */; };
 		9CCF00411FD598E4007F965D /* L10n.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCF00401FD598E4007F965D /* L10n.h */; };
+		9CEBA80A1FDF2AA300F8F211 /* fr.po in Resources */ = {isa = PBXBuildFile; fileRef = 9CEFAA231FD8427400A5E40F /* fr.po */; };
 		9CEFAA1D1FD8094700A5E40F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CEFAA1B1FD8094700A5E40F /* InfoPlist.strings */; };
 		9CEFAA201FD8098E00A5E40F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CEFAA1E1FD8098E00A5E40F /* InfoPlist.strings */; };
-		9CEFAA271FD84D7B00A5E40F /* fr.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9CEFAA251FD84D7B00A5E40F /* fr.mo */; };
 		9CEFAA281FD84D7B00A5E40F /* ru.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9CEFAA261FD84D7B00A5E40F /* ru.mo */; };
 /* End PBXBuildFile section */
 
@@ -90,7 +90,6 @@
 		9CEFAA211FD809C700A5E40F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9CEFAA221FD809C700A5E40F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9CEFAA231FD8427400A5E40F /* fr.po */ = {isa = PBXFileReference; lastKnownFileType = text; path = fr.po; sourceTree = "<group>"; };
-		9CEFAA251FD84D7B00A5E40F /* fr.mo */ = {isa = PBXFileReference; lastKnownFileType = file; path = fr.mo; sourceTree = "<group>"; };
 		9CEFAA261FD84D7B00A5E40F /* ru.mo */ = {isa = PBXFileReference; lastKnownFileType = file; path = ru.mo; sourceTree = "<group>"; };
 		A848DD7A01B2F7A7FC0E0EAC /* Pods-Example-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-objc/Pods-Example-objc.release.xcconfig"; sourceTree = "<group>"; };
 		C579A6E7ABCD684946F29E34 /* Pods-Example-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example-objc/Pods-Example-objc.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,17 +160,16 @@
 			path = "Example-swift";
 			sourceTree = "<group>";
 		};
-		9CCF00321FD598B0007F965D /* l18n */ = {
+		9CCF00321FD598B0007F965D /* L10n */ = {
 			isa = PBXGroup;
 			children = (
 				9CCF00401FD598E4007F965D /* L10n.h */,
 				9CEFAA231FD8427400A5E40F /* fr.po */,
-				9CEFAA251FD84D7B00A5E40F /* fr.mo */,
 				9CEFAA261FD84D7B00A5E40F /* ru.mo */,
 				9CCF00431FD59903007F965D /* ru.po */,
 				9CCF00341FD598B0007F965D /* Info.plist */,
 			);
-			path = l18n;
+			path = L10n;
 			sourceTree = "<group>";
 		};
 		9CCFFFAD1FD5944B007F965D = {
@@ -179,7 +177,7 @@
 			children = (
 				9CCFFFF81FD59559007F965D /* Examples-objc */,
 				9CCF000B1FD5956C007F965D /* Example-swift */,
-				9CCF00321FD598B0007F965D /* l18n */,
+				9CCF00321FD598B0007F965D /* L10n */,
 				9CCFFFB71FD5944B007F965D /* Products */,
 				881F2D97E62C9C64935E94C0 /* Pods */,
 				8482890E05C3F1529997CE55 /* Frameworks */,
@@ -336,8 +334,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CEFAA271FD84D7B00A5E40F /* fr.mo in Resources */,
 				9CEFAA281FD84D7B00A5E40F /* ru.mo in Resources */,
+				9CEBA80A1FDF2AA300F8F211 /* fr.po in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,7 +575,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = l18n/Info.plist;
+				INFOPLIST_FILE = L10n/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.POLocalizedString.example.L10n;
@@ -600,7 +598,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = l18n/Info.plist;
+				INFOPLIST_FILE = L10n/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.POLocalizedString.example.L10n;

@@ -17,18 +17,14 @@
 		9CCF00471FD5A30C007F965D /* POLocalizedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF00461FD5A30C007F965D /* POLocalizedString.m */; };
 		9CCFFF391FD58E12007F965D /* POLocalizedString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCFFF2F1FD58E12007F965D /* POLocalizedString.framework */; };
 		9CCFFF5C1FD5903C007F965D /* POLocalizedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4A1FD5903C007F965D /* POLocalizedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9CCFFF5E1FD5903C007F965D /* GettextTranslations.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4C1FD5903C007F965D /* GettextTranslations.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9CCFFF5F1FD5903C007F965D /* GettextTranslations.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF4D1FD5903C007F965D /* GettextTranslations.mm */; };
+		9CCFFF5E1FD5903C007F965D /* Gettext.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4C1FD5903C007F965D /* Gettext.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9CCFFF5F1FD5903C007F965D /* Gettext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF4D1FD5903C007F965D /* Gettext.mm */; };
 		9CCFFF601FD5903C007F965D /* MOParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4E1FD5903C007F965D /* MOParser.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CCFFF611FD5903C007F965D /* MOParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF4F1FD5903C007F965D /* MOParser.m */; };
-		9CCFFF621FD5903C007F965D /* NOTranslations.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF501FD5903C007F965D /* NOTranslations.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9CCFFF631FD5903C007F965D /* NOTranslations.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF511FD5903C007F965D /* NOTranslations.m */; };
 		9CCFFF651FD5903C007F965D /* POParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF531FD5903C007F965D /* POParser.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CCFFF661FD5903C007F965D /* POParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF541FD5903C007F965D /* POParser.m */; };
 		9CCFFF691FD5903C007F965D /* POEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF571FD5903C007F965D /* POEntry.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CCFFF6A1FD5903C007F965D /* POEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF581FD5903C007F965D /* POEntry.m */; };
-		9CCFFF6B1FD5903C007F965D /* Translations.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF591FD5903C007F965D /* Translations.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9CCFFF6C1FD5903C007F965D /* Translations.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF5A1FD5903C007F965D /* Translations.m */; };
 		9CCFFF751FD59059007F965D /* POLocalizedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF731FD59059007F965D /* POLocalizedStringTests.m */; };
 		9CCFFF761FD590C3007F965D /* POLocalizedString-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF701FD59049007F965D /* POLocalizedString-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CCFFF941FD59244007F965D /* muParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7C1FD59244007F965D /* muParser.h */; };
@@ -54,6 +50,7 @@
 		9CCFFFA81FD59244007F965D /* muParserInt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF911FD59244007F965D /* muParserInt.cpp */; };
 		9CCFFFA91FD59244007F965D /* muParserTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF921FD59244007F965D /* muParserTest.cpp */; };
 		9CCFFFAA1FD59244007F965D /* muParserTokenReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF931FD59244007F965D /* muParserTokenReader.cpp */; };
+		9CEBA8091FDEC2F500F8F211 /* Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CEBA8081FDEC2F500F8F211 /* Parser.h */; };
 		9CEFAA2A1FD9463F00A5E40F /* POLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFAA291FD9463F00A5E40F /* POLocalizedString.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,18 +76,14 @@
 		9CCFFF2F1FD58E12007F965D /* POLocalizedString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = POLocalizedString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCFFF381FD58E12007F965D /* POLocalizedStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POLocalizedStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCFFF4A1FD5903C007F965D /* POLocalizedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POLocalizedString.h; sourceTree = "<group>"; };
-		9CCFFF4C1FD5903C007F965D /* GettextTranslations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GettextTranslations.h; sourceTree = "<group>"; };
-		9CCFFF4D1FD5903C007F965D /* GettextTranslations.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GettextTranslations.mm; sourceTree = "<group>"; };
+		9CCFFF4C1FD5903C007F965D /* Gettext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gettext.h; sourceTree = "<group>"; };
+		9CCFFF4D1FD5903C007F965D /* Gettext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Gettext.mm; sourceTree = "<group>"; };
 		9CCFFF4E1FD5903C007F965D /* MOParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOParser.h; sourceTree = "<group>"; };
 		9CCFFF4F1FD5903C007F965D /* MOParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOParser.m; sourceTree = "<group>"; };
-		9CCFFF501FD5903C007F965D /* NOTranslations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOTranslations.h; sourceTree = "<group>"; };
-		9CCFFF511FD5903C007F965D /* NOTranslations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOTranslations.m; sourceTree = "<group>"; };
 		9CCFFF531FD5903C007F965D /* POParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POParser.h; sourceTree = "<group>"; };
 		9CCFFF541FD5903C007F965D /* POParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POParser.m; sourceTree = "<group>"; };
 		9CCFFF571FD5903C007F965D /* POEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POEntry.h; sourceTree = "<group>"; };
 		9CCFFF581FD5903C007F965D /* POEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POEntry.m; sourceTree = "<group>"; };
-		9CCFFF591FD5903C007F965D /* Translations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Translations.h; sourceTree = "<group>"; };
-		9CCFFF5A1FD5903C007F965D /* Translations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Translations.m; sourceTree = "<group>"; };
 		9CCFFF6F1FD59049007F965D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CCFFF701FD59049007F965D /* POLocalizedString-umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "POLocalizedString-umbrella.h"; sourceTree = "<group>"; };
 		9CCFFF721FD59059007F965D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +114,7 @@
 		9CCFFF921FD59244007F965D /* muParserTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = muParserTest.cpp; sourceTree = "<group>"; };
 		9CCFFF931FD59244007F965D /* muParserTokenReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = muParserTokenReader.cpp; sourceTree = "<group>"; };
 		9CCFFFAC1FD593A0007F965D /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		9CEBA8081FDEC2F500F8F211 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		9CEFAA0E1FD6EB4C00A5E40F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9CEFAA291FD9463F00A5E40F /* POLocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POLocalizedString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,12 +165,9 @@
 				9CCFFF4A1FD5903C007F965D /* POLocalizedString.h */,
 				9CCF00461FD5A30C007F965D /* POLocalizedString.m */,
 				9CEFAA291FD9463F00A5E40F /* POLocalizedString.swift */,
-				9CCFFF591FD5903C007F965D /* Translations.h */,
-				9CCFFF5A1FD5903C007F965D /* Translations.m */,
-				9CCFFF4C1FD5903C007F965D /* GettextTranslations.h */,
-				9CCFFF4D1FD5903C007F965D /* GettextTranslations.mm */,
-				9CCFFF501FD5903C007F965D /* NOTranslations.h */,
-				9CCFFF511FD5903C007F965D /* NOTranslations.m */,
+				9CCFFF4C1FD5903C007F965D /* Gettext.h */,
+				9CCFFF4D1FD5903C007F965D /* Gettext.mm */,
+				9CEBA8081FDEC2F500F8F211 /* Parser.h */,
 				9CCFFF4E1FD5903C007F965D /* MOParser.h */,
 				9CCFFF4F1FD5903C007F965D /* MOParser.m */,
 				9CCFFF531FD5903C007F965D /* POParser.h */,
@@ -279,18 +270,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CCFFF9B1FD59244007F965D /* muParserFixes.h in Headers */,
+				9CEBA8091FDEC2F500F8F211 /* Parser.h in Headers */,
 				9CCFFF9C1FD59244007F965D /* muParserInt.h in Headers */,
 				9CCFFF761FD590C3007F965D /* POLocalizedString-umbrella.h in Headers */,
 				9CCFFF981FD59244007F965D /* muParserDef.h in Headers */,
 				9CCFFF9D1FD59244007F965D /* muParserStack.h in Headers */,
 				9CCFFF9A1FD59244007F965D /* muParserError.h in Headers */,
 				9CCFFF9E1FD59244007F965D /* muParserTemplateMagic.h in Headers */,
-				9CCFFF5E1FD5903C007F965D /* GettextTranslations.h in Headers */,
+				9CCFFF5E1FD5903C007F965D /* Gettext.h in Headers */,
 				9CCFFF691FD5903C007F965D /* POEntry.h in Headers */,
-				9CCFFF621FD5903C007F965D /* NOTranslations.h in Headers */,
 				9CCFFF651FD5903C007F965D /* POParser.h in Headers */,
 				9CCFFF601FD5903C007F965D /* MOParser.h in Headers */,
-				9CCFFF6B1FD5903C007F965D /* Translations.h in Headers */,
 				9CCFFF941FD59244007F965D /* muParser.h in Headers */,
 				9CCFFF5C1FD5903C007F965D /* POLocalizedString.h in Headers */,
 				9CCFFF951FD59244007F965D /* muParserBase.h in Headers */,
@@ -415,17 +405,15 @@
 				9CCF00471FD5A30C007F965D /* POLocalizedString.m in Sources */,
 				9CCFFFA91FD59244007F965D /* muParserTest.cpp in Sources */,
 				9CCFFFA61FD59244007F965D /* muParserDLL.cpp in Sources */,
-				9CCFFF6C1FD5903C007F965D /* Translations.m in Sources */,
 				9CCFFFA21FD59244007F965D /* muParser.cpp in Sources */,
 				9CCFFFA51FD59244007F965D /* muParserCallback.cpp in Sources */,
 				9CCFFF6A1FD5903C007F965D /* POEntry.m in Sources */,
-				9CCFFF5F1FD5903C007F965D /* GettextTranslations.mm in Sources */,
+				9CCFFF5F1FD5903C007F965D /* Gettext.mm in Sources */,
 				9CCFFFAA1FD59244007F965D /* muParserTokenReader.cpp in Sources */,
 				9CCFFFA81FD59244007F965D /* muParserInt.cpp in Sources */,
 				9CCFFFA71FD59244007F965D /* muParserError.cpp in Sources */,
 				9CCFFFA31FD59244007F965D /* muParserBase.cpp in Sources */,
 				9CEFAA2A1FD9463F00A5E40F /* POLocalizedString.swift in Sources */,
-				9CCFFF631FD5903C007F965D /* NOTranslations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

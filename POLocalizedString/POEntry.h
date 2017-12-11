@@ -1,10 +1,25 @@
+// POEntry.h
 //
-//  POEntry.h
-//  pomo
+// Created by pronebird on 3/28/11.
+// Copyright 2011 Andrej Mihajlov. All rights reserved.
 //
-//  Created by pronebird on 3/28/11.
-//  Copyright 2011 Andrej Mihajlov. All rights reserved.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
 
@@ -12,22 +27,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface POEntry : NSObject
 
-@property (assign) BOOL is_plural;
-@property (strong, nonatomic, nullable) NSString *context;
-@property (strong, nonatomic, nullable) NSString *singular;
-@property (strong, nonatomic, nullable) NSString *plural;
-@property (strong, nonatomic) NSMutableArray *translations;
-@property (strong, nonatomic, nullable) NSString *translator_comments;
-@property (strong, nonatomic, nullable) NSString *extracted_comments;
-@property (strong, nonatomic) NSMutableArray *references;
-@property (strong, nonatomic) NSMutableArray *flags;
+@property (nonatomic, strong, nullable) NSString *context;
+@property (nonatomic, strong, nullable) NSString *msgid;
+@property (nonatomic, strong, nullable) NSString *msgid_plural;
+@property (nonatomic, strong) NSMutableArray *translations;
+@property (nonatomic, strong, nullable) NSString *translator_comments;
+@property (nonatomic, strong, nullable) NSString *extracted_comments;
+@property (nonatomic, strong) NSMutableArray *references;
+@property (nonatomic, strong) NSMutableArray *flags;
 
-@property (readonly, nonatomic) NSString *key;
+@property (nonatomic, readonly, nullable) NSString *key;
 
-+ (NSString *)stringKey:(NSString *)singular;
-+ (NSString *)stringKey:(NSString *)singular context:(nullable NSString *)context;
-
-- (void)debugPrint;
++ (nullable NSString *)keyWithMsgid:(NSString *)msgid context:(nullable NSString *)context;
 
 @end
 

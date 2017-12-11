@@ -1,10 +1,25 @@
+// MOParser.m
 //
-//  AMMOParser.m
-//  pomo
+// Created by pronebird on 12/4/11.
+// Copyright (c) 2011 Andrej Mihajlov. All rights reserved.
 //
-//  Created by pronebird on 12/4/11.
-//  Copyright (c) 2011 Andrej Mihajlov. All rights reserved.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
 #import "MOParser.h"
 
@@ -27,7 +42,7 @@ typedef struct _mo_position {
 
 @implementation MOParser
 
-- (BOOL)importFileAtPath:(NSString *)filename {
++ (nullable Gettext *)loadFile:(NSString *)path; {
 	POEntry *entry;
 	mo_header mo;
 	mo_position *originals = NULL,
@@ -42,17 +57,18 @@ typedef struct _mo_position {
 			headers_start_pos = 0, 
 			headers_end_pos = 0, 
 			headers_length = 0;
-	BOOL is_little_endian = NO,
-		 retval = NO;
+    BOOL is_little_endian = NO;
 	NSString *original_string = nil;//, *translation_string = nil;
 	NSArray *headersArray = nil;
+    Gettext *retval = nil,
+            *gettext = [[Gettext alloc] init];
 
-	FILE *fp = fopen([filename cStringUsingEncoding:NSUTF8StringEncoding], "rb");
+	FILE *fp = fopen([path cStringUsingEncoding:NSUTF8StringEncoding], "rb");
 
 	if(!fp) {
-		return NO;
+		return nil;
 	}
-	
+    
 	if(fread(&mo, sizeof(mo), 1, fp) != 1) {
 		//NSLog(@"Cannot read file header. File probably corrupted.");
 		goto cleanup;
@@ -60,10 +76,8 @@ typedef struct _mo_position {
 
 	is_little_endian = mo.magic == OSSwapInt32(magic);
 
-	if(mo.magic != magic && !is_little_endian) {
-		//NSLog(@"Magic number mismatch. File probably corrupted.");
+	if(mo.magic != magic && !is_little_endian)
 		goto cleanup;
-	}
 		
 	// swap to big endian
 	if(is_little_endian) {
@@ -76,10 +90,8 @@ typedef struct _mo_position {
 	}
 	
 	// support revision 0 only
-	if(mo.revision != 0) {
-		//NSLog(@"Unsupported mo.revision: %d", mo.revision);
+	if(mo.revision != 0)
 		goto cleanup;
-	}
 
 	if(fseek(fp, mo.orig_strings_addr, SEEK_SET) != 0)
 		goto cleanup;
@@ -127,10 +139,7 @@ typedef struct _mo_position {
 		buf[translations[i].length] = '\0';
 
 		// parse header from translation string
-		if(originals[i].length == 0) {
-			// @TODO: figure out what it means and why it's here
-			//translation_string = [NSString stringWithUTF8String:buf];
-        } else { // otherwise build entry
+		if(originals[i].length != 0) { // otherwise build entry
             
 			entry = [POEntry new];
 
@@ -142,14 +151,12 @@ typedef struct _mo_position {
 			buf[originals[i].length] = '\0';
 			original_string = [NSString stringWithUTF8String:buf];
 
-			entry.singular = original_string;
+			entry.msgid = original_string;
 			if(strlen(buf) < originals[i].length) {
-				entry.plural = [NSString stringWithUTF8String:buf + strlen(buf) + 1];
-				entry.is_plural = YES;
+				entry.msgid_plural = [NSString stringWithUTF8String:buf + strlen(buf) + 1];
 			}
 			
-			//[entry debugPrint];
-			[self addEntry:entry];
+			[gettext addEntry:entry];
 		}
 	}
 	
@@ -177,19 +184,17 @@ typedef struct _mo_position {
 				   componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 		
 		for(NSString *str in headersArray) {
-			NSArray *arr = [self splitString:str separator:@":"];
+            NSArray *arr = [str componentsSeparatedByString:@":"];
 			
 			if(arr.count < 2)
 				continue;
 			
-			//NSLog(@"Header %@ found: %@", [arr objectAtIndex:0], value);
-			
-			[self setHeader:arr[0]
+			[gettext setHeader:arr[0]
 					  value:[arr[1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
 		}
 	}
 	
-	retval = YES;
+	retval = gettext;
 
 cleanup:
 	
@@ -201,24 +206,6 @@ cleanup:
 	fclose(fp);
 	
 	return retval;
-}
-
-- (NSArray *)splitString:(NSString *)string separator:(NSString *)separator {
-	NSScanner *scan = [NSScanner scannerWithString:string];
-	NSString *token = nil;
-	NSMutableArray *array = [NSMutableArray new];
-	
-	if([scan scanUpToString:separator intoString:&token]) {
-		[array addObject:token];
-		
-		NSUInteger pos = [scan scanLocation] + 1;
-		
-		if(pos < string.length)
-			[array addObject:[string substringFromIndex:pos]];
-	}
-	
-	
-	return [NSArray arrayWithArray:array];	
 }
 
 @end

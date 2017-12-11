@@ -1,7 +1,7 @@
-// Parser.h
+// Gettext.h
 //
-// Created by Andrej Mihajlov on 4/7/12.
-// Copyright (c) 2012 Andrej Mihajlov. All rights reserved.
+// Created by pronebird on 3/28/11.
+// Copyright 2011 Andrej Mihajlov. All rights reserved.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,14 +22,29 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import "POEntry.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class Gettext;
+@interface Gettext : NSObject
 
-@protocol Parser <NSObject>
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> *headers;
 
-+ (nullable Gettext *)loadFile:(NSString *)path;
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, POEntry *> *entries;
+
+@property (readonly) NSUInteger numPlurals;
+
+@property (nonatomic, nullable, readonly) NSString *pluralRule;
+
+- (void)addEntry:(POEntry *)entry;
+
+- (void)setHeader:(NSString *)header value:(NSString *)value;
+
+- (NSUInteger)selectPluralForm:(NSInteger)count;
+
+- (NSString *)stringWithMsgid:(NSString *)msgid context:(nullable NSString *)context;
+
+- (NSString *)stringWithMsgid:(NSString *)msgid plural:(NSString *)msgid_plural count:(NSInteger)count context:(nullable NSString *)context;
 
 @end
 

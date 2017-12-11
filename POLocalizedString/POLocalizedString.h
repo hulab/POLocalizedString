@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
  Returns a localized version of the string designated by the specified msgid.
 
  @param msgid The msgid for a string in the template file.
- @return The result of invoking localizedStringForMsgid:context: on the main bundle passing nil as the context.
+ @return The result of invoking localizedStringForMsgid:context: on the localized bundle passing nil as the context.
  */
 FOUNDATION_EXTERN NSString *POLocalizedString(NSString *msgid);
 
@@ -38,7 +38,7 @@ FOUNDATION_EXTERN NSString *POLocalizedString(NSString *msgid);
 
  @param msgid The msgid for a string in the template file.
  @param context The context of the msgid.
- @return The result of invoking localizedStringForMsgid:context: on the main bundle with the given context.
+ @return The result of invoking localizedStringForMsgid:context: on the localized bundle with the given context.
  */
 FOUNDATION_EXTERN NSString *POLocalizedStringFromContext(NSString *msgid, NSString  * _Nullable context);
 
@@ -48,7 +48,7 @@ FOUNDATION_EXTERN NSString *POLocalizedStringFromContext(NSString *msgid, NSStri
  @param msgid The msgid for a format in the template file.
  @param msgid_plural The msgid_plural for a format in the template file.
  @param n The number (e.g. item count) to determine the translation for the respective grammatical number.
- @return The result of invoking localizedFormatForMsgid:plural:count:context: on the main bundle with the given context.
+ @return The result of invoking localizedFormatForMsgid:plural:count:context: on the localized bundle with the given context.
  */
 FOUNDATION_EXTERN NSString *POLocalizedPluralFormat(NSString *msgid, NSString *msgid_plural, NSInteger n);
 
@@ -59,7 +59,7 @@ FOUNDATION_EXTERN NSString *POLocalizedPluralFormat(NSString *msgid, NSString *m
  @param msgid_plural The msgid_plural for a format in the template file.
  @param n The number (e.g. item count) to determine the translation for the respective grammatical number.
  @param context The context for a format in the template file.
- @return The result of invoking localizedFormatForMsgid:plural:count:context: on the main bundle passing nil as the context.
+ @return The result of invoking localizedFormatForMsgid:plural:count:context: on the localized bundle passing nil as the context.
  */
 FOUNDATION_EXTERN NSString *POLocalizedPluralFormatFromContext(NSString *msgid, NSString *msgid_plural, NSInteger n, NSString * _Nullable context);
 
@@ -73,7 +73,7 @@ FOUNDATION_EXTERN NSString *POLocalizedPluralFormatFromContext(NSString *msgid, 
 FOUNDATION_EXTERN NSString *POLocalizedStringInBundle(NSBundle *bundle, NSString *msgid);
 
 /**
- Returns a localized version of the string designated by the specified msgid, msgid_plural and the count n.
+ Returns a localized version of the string designated by the specified msgid.
 
  @param bundle The bundle of the localization files.
  @param msgid The msgid for a string in the template file.
