@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         
         subTitleLabel.text = nil
 
-        versionLabel.text = "iOS %s".localized(in: bundle, with: UIDevice.current.systemVersion.c_format)
+        versionLabel.text = "iOS %s".localized(in: bundle, with: UIDevice.current.systemVersion.ascii)
     }
 
     @IBAction func sliderValueDidChange(_ sender: AnyObject) {

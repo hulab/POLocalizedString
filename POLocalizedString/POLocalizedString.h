@@ -37,6 +37,16 @@ FOUNDATION_EXTERN NSString *POLocalizedPluralFormatFromContextInBundle(NSBundle 
 
 @interface NSString (POLocalizedString)
 
+/**
+ Returns an ascii representation of the receiver.
+ */
+@property (nonatomic, readonly) const char *ascii;
+
+/**
+ Returns an unicode representation of the receiver.
+ */
+@property (nonatomic, readonly) const char *unicode;
+
 + (instancetype)localizedStringWithMsgid:(NSString *)msgid, ... NS_FORMAT_FUNCTION(1,2);
 
 + (instancetype)localizedStringFromContext:(NSString *)context msgid:(NSString *)msgid, ... NS_FORMAT_FUNCTION(2,3);

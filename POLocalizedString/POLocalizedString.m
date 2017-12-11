@@ -112,6 +112,14 @@ NSString *POLocalizedPluralFormatFromContextInBundle(NSBundle *bundle, NSString 
 
 @implementation NSString (POLocalizedString)
 
+- (const char *)ascii {
+    return [self cStringUsingEncoding:NSASCIIStringEncoding];
+}
+
+- (const char *)unicode {
+    return [self cStringUsingEncoding:NSUnicodeStringEncoding];
+}
+
 + (instancetype)localizedStringWithMsgid:(NSString *)msgid, ... {
     va_list args;
     va_start(args, msgid);

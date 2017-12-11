@@ -10,8 +10,14 @@ import Foundation
 
 public extension String {
     
-    public var c_format: UnsafePointer<Int8> {
-        return (self as NSString).utf8String!
+    /// Returns an ascii representation of the receiver.
+    public var ascii: UnsafePointer<Int8> {
+        return (self as NSString).ascii
+    }
+    
+    /// Returns an unicode representation of the receiver.
+    public var unicode: UnsafePointer<Int8> {
+        return (self as NSString).unicode
     }
     
     public func localized() -> String {
