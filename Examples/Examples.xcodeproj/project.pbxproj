@@ -24,7 +24,7 @@
 		9CCF00391FD598B0007F965D /* L10n.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCF00311FD598B0007F965D /* L10n.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9CCF003D1FD598BD007F965D /* L10n.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCF00311FD598B0007F965D /* L10n.framework */; };
 		9CCF00411FD598E4007F965D /* L10n.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCF00401FD598E4007F965D /* L10n.h */; };
-		9CEBA80A1FDF2AA300F8F211 /* fr.po in Resources */ = {isa = PBXBuildFile; fileRef = 9CEFAA231FD8427400A5E40F /* fr.po */; };
+		9CEBA80C1FDF312000F8F211 /* fr.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9CEBA80B1FDF311F00F8F211 /* fr.mo */; };
 		9CEFAA1D1FD8094700A5E40F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CEFAA1B1FD8094700A5E40F /* InfoPlist.strings */; };
 		9CEFAA201FD8098E00A5E40F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CEFAA1E1FD8098E00A5E40F /* InfoPlist.strings */; };
 		9CEFAA281FD84D7B00A5E40F /* ru.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9CEFAA261FD84D7B00A5E40F /* ru.mo */; };
@@ -85,6 +85,7 @@
 		9CCFFFFB1FD59559007F965D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CCFFFFD1FD59559007F965D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CCFFFFF1FD59559007F965D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9CEBA80B1FDF311F00F8F211 /* fr.mo */ = {isa = PBXFileReference; lastKnownFileType = file; path = fr.mo; sourceTree = "<group>"; };
 		9CEFAA1C1FD8094700A5E40F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9CEFAA1F1FD8098E00A5E40F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9CEFAA211FD809C700A5E40F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -164,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				9CCF00401FD598E4007F965D /* L10n.h */,
+				9CEBA80B1FDF311F00F8F211 /* fr.mo */,
 				9CEFAA231FD8427400A5E40F /* fr.po */,
 				9CEFAA261FD84D7B00A5E40F /* ru.mo */,
 				9CCF00431FD59903007F965D /* ru.po */,
@@ -292,7 +294,7 @@
 		9CCFFFAE1FD5944B007F965D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Hulab;
 				TargetAttributes = {
 					9CCF00301FD598B0007F965D = {
@@ -334,8 +336,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CEBA80C1FDF312000F8F211 /* fr.mo in Resources */,
 				9CEFAA281FD84D7B00A5E40F /* ru.mo in Resources */,
-				9CEBA80A1FDF2AA300F8F211 /* fr.po in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +714,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -720,6 +723,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C579A6E7ABCD684946F29E34 /* Pods-Example-objc.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q95SQ3447E;
@@ -735,6 +739,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A848DD7A01B2F7A7FC0E0EAC /* Pods-Example-objc.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q95SQ3447E;
