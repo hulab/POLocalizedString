@@ -3,41 +3,41 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: POLocalizedString\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2017-12-12 20:54+0100\n"
-"PO-Revision-Date: 2008-07-22 18:13+0200\n"
+"PO-Revision-Date: 2017-12-12 21:32+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language-Team: \n"
 "X-Generator: Poedit 2.0.5\n"
+"Last-Translator: \n"
+"Language: en\n"
 
 msgid "Test 1"
-msgstr ""
+msgstr "Simple string"
 
 msgctxt "context"
 msgid "Test 2"
-msgstr ""
+msgstr "Simple string with context"
 
 msgid "Test 3 %s"
-msgstr ""
+msgstr "Ascii format %s"
 
 msgid "Test 4 %S"
-msgstr ""
+msgstr "Unicode format %S"
 
-msgid "Test 5 %2s %3i"
-msgstr ""
+msgid "Test 5 %2s %1i"
+msgstr "Complex format %2s %1i"
 
 msgid "Test 5 %i"
 msgid_plural "Tests 5 %i"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i Singular"
+msgstr[1] "%i Plural"
 
 msgid ""
 "Test\n"

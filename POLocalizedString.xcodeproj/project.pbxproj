@@ -8,12 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9C0E7F181FDE919E003AECCE /* template.pot in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F141FDE919D003AECCE /* template.pot */; };
-		9C0E7F191FDE919E003AECCE /* es_ES.po in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F151FDE919D003AECCE /* es_ES.po */; };
-		9C0E7F1A1FDE919E003AECCE /* af.po in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F161FDE919D003AECCE /* af.po */; };
-		9C0E7F1B1FDE919E003AECCE /* kw.po in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F171FDE919E003AECCE /* kw.po */; };
-		9C0E7F1F1FDE91A9003AECCE /* kw.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F1C1FDE91A9003AECCE /* kw.mo */; };
-		9C0E7F201FDE91A9003AECCE /* es_ES.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F1D1FDE91A9003AECCE /* es_ES.mo */; };
-		9C0E7F211FDE91A9003AECCE /* af.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F1E1FDE91A9003AECCE /* af.mo */; };
 		9CCF00471FD5A30C007F965D /* POLocalizedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF00461FD5A30C007F965D /* POLocalizedString.m */; };
 		9CCFFF391FD58E12007F965D /* POLocalizedString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCFFF2F1FD58E12007F965D /* POLocalizedString.framework */; };
 		9CCFFF5C1FD5903C007F965D /* POLocalizedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4A1FD5903C007F965D /* POLocalizedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,7 +19,7 @@
 		9CCFFF661FD5903C007F965D /* POParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF541FD5903C007F965D /* POParser.m */; };
 		9CCFFF691FD5903C007F965D /* POEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF571FD5903C007F965D /* POEntry.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CCFFF6A1FD5903C007F965D /* POEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF581FD5903C007F965D /* POEntry.m */; };
-		9CCFFF751FD59059007F965D /* POLocalizedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF731FD59059007F965D /* POLocalizedStringTests.m */; };
+		9CCFFF751FD59059007F965D /* MOLocalizedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF731FD59059007F965D /* MOLocalizedStringTests.m */; };
 		9CCFFF761FD590C3007F965D /* POLocalizedString-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF701FD59049007F965D /* POLocalizedString-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CCFFF941FD59244007F965D /* muParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7C1FD59244007F965D /* muParser.h */; };
 		9CCFFF951FD59244007F965D /* muParserBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7D1FD59244007F965D /* muParserBase.h */; };
@@ -50,6 +44,9 @@
 		9CCFFFA81FD59244007F965D /* muParserInt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF911FD59244007F965D /* muParserInt.cpp */; };
 		9CCFFFA91FD59244007F965D /* muParserTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF921FD59244007F965D /* muParserTest.cpp */; };
 		9CCFFFAA1FD59244007F965D /* muParserTokenReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF931FD59244007F965D /* muParserTokenReader.cpp */; };
+		9CE0052D1FE06DED00E31086 /* mo.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9CE0052B1FE06DED00E31086 /* mo.mo */; };
+		9CE0052E1FE06DED00E31086 /* po.po in Resources */ = {isa = PBXBuildFile; fileRef = 9CE0052C1FE06DED00E31086 /* po.po */; };
+		9CE005301FE06DF100E31086 /* POLocalizedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE0052F1FE06DF100E31086 /* POLocalizedStringTests.m */; };
 		9CEBA8091FDEC2F500F8F211 /* Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CEBA8081FDEC2F500F8F211 /* Parser.h */; };
 		9CEFAA2A1FD9463F00A5E40F /* POLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFAA291FD9463F00A5E40F /* POLocalizedString.swift */; };
 /* End PBXBuildFile section */
@@ -66,12 +63,6 @@
 
 /* Begin PBXFileReference section */
 		9C0E7F141FDE919D003AECCE /* template.pot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.pot; sourceTree = "<group>"; };
-		9C0E7F151FDE919D003AECCE /* es_ES.po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = es_ES.po; sourceTree = "<group>"; };
-		9C0E7F161FDE919D003AECCE /* af.po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = af.po; sourceTree = "<group>"; };
-		9C0E7F171FDE919E003AECCE /* kw.po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kw.po; sourceTree = "<group>"; };
-		9C0E7F1C1FDE91A9003AECCE /* kw.mo */ = {isa = PBXFileReference; lastKnownFileType = file; path = kw.mo; sourceTree = "<group>"; };
-		9C0E7F1D1FDE91A9003AECCE /* es_ES.mo */ = {isa = PBXFileReference; lastKnownFileType = file; path = es_ES.mo; sourceTree = "<group>"; };
-		9C0E7F1E1FDE91A9003AECCE /* af.mo */ = {isa = PBXFileReference; lastKnownFileType = file; path = af.mo; sourceTree = "<group>"; };
 		9CCF00461FD5A30C007F965D /* POLocalizedString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POLocalizedString.m; sourceTree = "<group>"; };
 		9CCFFF2F1FD58E12007F965D /* POLocalizedString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = POLocalizedString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCFFF381FD58E12007F965D /* POLocalizedStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POLocalizedStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,7 +78,7 @@
 		9CCFFF6F1FD59049007F965D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CCFFF701FD59049007F965D /* POLocalizedString-umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "POLocalizedString-umbrella.h"; sourceTree = "<group>"; };
 		9CCFFF721FD59059007F965D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CCFFF731FD59059007F965D /* POLocalizedStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POLocalizedStringTests.m; sourceTree = "<group>"; };
+		9CCFFF731FD59059007F965D /* MOLocalizedStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOLocalizedStringTests.m; sourceTree = "<group>"; };
 		9CCFFF781FD591A7007F965D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		9CCFFF791FD591A7007F965D /* POLocalizedString.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = POLocalizedString.podspec; sourceTree = SOURCE_ROOT; };
 		9CCFFF7C1FD59244007F965D /* muParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = muParser.h; sourceTree = "<group>"; };
@@ -114,6 +105,9 @@
 		9CCFFF921FD59244007F965D /* muParserTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = muParserTest.cpp; sourceTree = "<group>"; };
 		9CCFFF931FD59244007F965D /* muParserTokenReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = muParserTokenReader.cpp; sourceTree = "<group>"; };
 		9CCFFFAC1FD593A0007F965D /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		9CE0052B1FE06DED00E31086 /* mo.mo */ = {isa = PBXFileReference; lastKnownFileType = file; path = mo.mo; sourceTree = "<group>"; };
+		9CE0052C1FE06DED00E31086 /* po.po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = po.po; sourceTree = "<group>"; };
+		9CE0052F1FE06DF100E31086 /* POLocalizedStringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POLocalizedStringTests.m; sourceTree = "<group>"; };
 		9CEBA8081FDEC2F500F8F211 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		9CEFAA0E1FD6EB4C00A5E40F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9CEFAA291FD9463F00A5E40F /* POLocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POLocalizedString.swift; sourceTree = "<group>"; };
@@ -192,14 +186,11 @@
 			isa = PBXGroup;
 			children = (
 				9CCFFF721FD59059007F965D /* Info.plist */,
+				9CE0052B1FE06DED00E31086 /* mo.mo */,
+				9CE0052C1FE06DED00E31086 /* po.po */,
 				9C0E7F141FDE919D003AECCE /* template.pot */,
-				9C0E7F161FDE919D003AECCE /* af.po */,
-				9C0E7F1E1FDE91A9003AECCE /* af.mo */,
-				9C0E7F151FDE919D003AECCE /* es_ES.po */,
-				9C0E7F1D1FDE91A9003AECCE /* es_ES.mo */,
-				9C0E7F171FDE919E003AECCE /* kw.po */,
-				9C0E7F1C1FDE91A9003AECCE /* kw.mo */,
-				9CCFFF731FD59059007F965D /* POLocalizedStringTests.m */,
+				9CE0052F1FE06DF100E31086 /* POLocalizedStringTests.m */,
+				9CCFFF731FD59059007F965D /* MOLocalizedStringTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -382,13 +373,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C0E7F211FDE91A9003AECCE /* af.mo in Resources */,
-				9C0E7F1B1FDE919E003AECCE /* kw.po in Resources */,
-				9C0E7F1F1FDE91A9003AECCE /* kw.mo in Resources */,
-				9C0E7F1A1FDE919E003AECCE /* af.po in Resources */,
-				9C0E7F201FDE91A9003AECCE /* es_ES.mo in Resources */,
-				9C0E7F191FDE919E003AECCE /* es_ES.po in Resources */,
+				9CE0052E1FE06DED00E31086 /* po.po in Resources */,
 				9C0E7F181FDE919E003AECCE /* template.pot in Resources */,
+				9CE0052D1FE06DED00E31086 /* mo.mo in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +408,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CCFFF751FD59059007F965D /* POLocalizedStringTests.m in Sources */,
+				9CCFFF751FD59059007F965D /* MOLocalizedStringTests.m in Sources */,
+				9CE005301FE06DF100E31086 /* POLocalizedStringTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

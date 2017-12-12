@@ -59,10 +59,6 @@
                 continue;
             }
             
-            if(!entry) {
-                entry = [POEntry new];
-            }
-            
             // parse header
             if([line characterAtIndex:0] == '"' && [line characterAtIndex:line.length - 1] == '"') {
                 
@@ -76,65 +72,71 @@
                 
                 [gettext setHeader:arr[0] value:value];
                 
-            } else { // parse actual entry
-                NSArray *arr = [line splitByString:@" "];
-                NSString *key, *value;
-                NSUInteger keylen = 0;
-                unichar c;
+                continue;
+            }
+            
+            if(!entry) {
+                entry = [POEntry new];
+            }
+            
+            // parse actual entry
+            NSArray *arr = [line splitByString:@" "];
+            NSString *key, *value;
+            NSUInteger keylen = 0;
+            unichar c;
+            
+            if(arr.count < 2)
+                continue;
+            
+            key = arr[0];
+            value = arr[1];
+            
+            keylen = key.length;
+            
+            if([line characterAtIndex:0] == '#') { // #. section
+                // don't use "key" here because of #_ (space) format
+                // for translator comments
+                c = [line characterAtIndex:1];
                 
-                if(arr.count < 2)
-                    continue;
-                
-                key = arr[0];
-                value = arr[1];
-                
-                keylen = key.length;
-                
-                if([line characterAtIndex:0] == '#') { // #. section
-                    // don't use "key" here because of #_ (space) format
-                    // for translator comments
-                    c = [line characterAtIndex:1];
-                    
-                    switch(c)  {
-                            // reference
-                        case ':':
-                            [entry.references addObject:value];
-                            break;
-                            
-                            // flag
-                        case ',':
-                            [entry.flags addObject:value];
-                            break;
-                            
-                            // translator comments
-                        case ' ':
-                            entry.translator_comments = value;
-                            break;
-                            
-                            // extracted comments
-                        case '.':
-                            entry.extracted_comments = value;
-                            break;
-                            
-                            // previous message, not implemented
-                        case '|':
-                            break;
-                            
-                        default:
-                            continue;
-                            break;
-                    }
-                } else if([key isEqualToString:@"msgctxt"]) { // msgctxt
-                    entry.context = value.decodePO.stringByRemovingQuotes;
-                } else if([key isEqualToString:@"msgid"]) { // msgid
-                    entry.msgid = value.decodePO.stringByRemovingQuotes;
-                } else if([key isEqualToString:@"msgstr"]) { // msgid
-                    [entry.translations addObject:value.decodePO.stringByRemovingQuotes];
-                } else if([key isEqualToString:@"msgid_plural"]) { // msgid
-                    entry.msgid_plural = value.decodePO.stringByRemovingQuotes;
-                } else if(keylen >= 8 && [[key substringWithRange:NSMakeRange(0, 7)] isEqualToString:@"msgstr["]) {
-                    [entry.translations addObject:value.decodePO.stringByRemovingQuotes];
+                switch(c)  {
+                        // reference
+                    case ':':
+                        [entry.references addObject:value];
+                        break;
+                        
+                        // flag
+                    case ',':
+                        [entry.flags addObject:value];
+                        break;
+                        
+                        // translator comments
+                    case ' ':
+                        entry.translator_comments = value;
+                        break;
+                        
+                        // extracted comments
+                    case '.':
+                        entry.extracted_comments = value;
+                        break;
+                        
+                        // previous message, not implemented
+                    case '|':
+                        break;
+                        
+                    default:
+                        continue;
+                        break;
                 }
+            } else if([key isEqualToString:@"msgctxt"]) { // msgctxt
+                entry.context = value.decodePO.stringByRemovingQuotes;
+            } else if([key isEqualToString:@"msgid"]) { // msgid
+                entry.msgid = value.decodePO.stringByRemovingQuotes;
+            } else if([key isEqualToString:@"msgstr"]) { // msgid
+                [entry.translations addObject:value.decodePO.stringByRemovingQuotes];
+            } else if([key isEqualToString:@"msgid_plural"]) { // msgid
+                entry.msgid_plural = value.decodePO.stringByRemovingQuotes;
+            } else if(keylen >= 8 && [[key substringWithRange:NSMakeRange(0, 7)] isEqualToString:@"msgstr["]) {
+                [entry.translations addObject:value.decodePO.stringByRemovingQuotes];
             }
         }
         

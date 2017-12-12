@@ -9,17 +9,17 @@
 #import <XCTest/XCTest.h>
 #import <POLocalizedString/POLocalizedString.h>
 
-@interface POLocalizedStringTests : XCTestCase
+@interface MOLocalizedStringTests : XCTestCase
 @property (nonatomic, weak) NSBundle *bundle;
 @end
 
-@implementation POLocalizedStringTests
+@implementation MOLocalizedStringTests
 
 - (void)setUp {
     [super setUp];
     
     self.bundle = [NSBundle bundleForClass:self.class];
-    self.bundle.language = @"po";
+    self.bundle.language = @"mo";
     
     NSBundle.localizedBundle = self.bundle;
 }
@@ -68,7 +68,7 @@
 
 - (void)testLoadPerformance {
     [self measureBlock:^{
-        self.bundle.language = @"po";
+        self.bundle.language = @"mo";
         POLocalizedString(@"The URL is not valid and cannot be loaded.");
     }];
 }
