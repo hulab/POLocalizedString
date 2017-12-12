@@ -189,8 +189,8 @@ typedef struct _mo_position {
 			if(arr.count < 2)
 				continue;
 			
-			[gettext setHeader:arr[0]
-					  value:[arr[1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
+            NSString *header = [arr[1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+			[gettext setHeader:header forKey:arr[0]];
 		}
 	}
 	

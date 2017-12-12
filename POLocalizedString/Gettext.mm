@@ -115,12 +115,12 @@
 	return result;
 }
 
-- (void)setHeader:(NSString *)header value:(NSString*)value {
-	_headers[header] = value;
+- (void)setHeader:(NSString *)header forKey:(NSString *)key {
+	_headers[key] = header;
 	
-	if([header isEqualToString:@"Plural-Forms"]) {
+	if([key isEqualToString:@"Plural-Forms"]) {
         
-		NSDictionary *dict = [self _scanPluralFormsString:self.headers[header]];
+		NSDictionary *dict = [self _scanPluralFormsString:header];
 		NSString *nplurals = dict[@"nplurals"];
 		NSString *rule = dict[@"plural"];
 		

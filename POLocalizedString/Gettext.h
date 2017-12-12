@@ -64,7 +64,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param header The header key.
  @param value The headet value.
  */
-- (void)setHeader:(NSString *)header value:(NSString *)value;
+- (void)setHeader:(NSString *)header forKey:(NSString *)key;
 
 /**
  Selects a plural form for the given count value.
