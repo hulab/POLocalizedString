@@ -85,19 +85,7 @@ static NSBundle *localizedBundle = nil;
 }
 
 - (NSString *)language {
-    NSString *language = objc_getAssociatedObject(self, @selector(language));
-    
-    if (!language) {
-        NSString *preferredLanguage = NSLocale.preferredLanguages.firstObject;
-        NSScanner *scanner = [[NSScanner alloc] initWithString:preferredLanguage];
-        
-        if(![scanner scanUpToString:@"-" intoString:&language]) {
-            language = preferredLanguage;
-        }
-        
-        objc_setAssociatedObject(self, @selector(language), language, OBJC_ASSOCIATION_RETAIN);
-    }
-    return language;
+    return objc_getAssociatedObject(self, @selector(language));
 }
 
 - (void)setLanguage:(NSString *)language {
@@ -112,35 +100,75 @@ static NSBundle *localizedBundle = nil;
     
     if (!gettext) {
         
-        NSString *language = self.language;
-
-        NSString *filename = [NSString stringWithFormat:@"%@.%@", language, @"mo"];
-        NSString *path = [self.bundlePath stringByAppendingPathComponent:filename];
+        NSString *file = [self localizedFile];
+        NSString *path = [self.bundlePath stringByAppendingPathComponent:file];
         
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        
-        if([fileManager fileExistsAtPath:path]) {
+        if ([file hasSuffix:@".mo"]) {
             gettext = [MOParser loadFile:path];
-            
-            objc_setAssociatedObject(self, @selector(gettext), gettext, OBJC_ASSOCIATION_RETAIN);
-            return gettext;
-        }
-        
-        filename = [NSString stringWithFormat:@"%@.%@", language, @"po"];
-        path = [self.bundlePath stringByAppendingPathComponent:filename];
-        
-        if([fileManager fileExistsAtPath:path]) {
+        } else if([file hasSuffix:@".po"]) {
             gettext = [POParser loadFile:path];
-            
-            objc_setAssociatedObject(self, @selector(gettext), gettext, OBJC_ASSOCIATION_RETAIN);
-            return gettext;
+        } else {
+            gettext = [[Gettext alloc] init];
         }
         
-        gettext = [[Gettext alloc] init];
         objc_setAssociatedObject(self, @selector(gettext), gettext, OBJC_ASSOCIATION_RETAIN);
     }
     
     return gettext;
+}
+
+- (NSString *)localizedFile {
+    
+    NSFileManager *manager = [NSFileManager defaultManager];
+    
+    NSError *error = nil;
+    NSArray<NSString *> *files = [manager contentsOfDirectoryAtPath:self.bundlePath error:&error];
+    if (!files) {
+        NSLog(@"Error: %@", error);
+        return nil;
+    }
+    
+    files = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self ENDSWITH '.mo' OR self ENDSWITH '.po'"]];
+    
+    // First check for the specified language.
+    if (self.language) {
+        
+        NSString *file = [NSString stringWithFormat:@"%@.%@", self.language, @"mo"];
+        if ([files containsObject:file]) {
+            return file;
+        }
+        
+        file = [NSString stringWithFormat:@"%@.%@", self.language, @"po"];
+        if ([files containsObject:file]) {
+            return file;
+        }
+        
+        NSLog(@"The specified language is not available");
+    }
+    
+    // Interate throught preferred languages to get a match.
+    for (NSString *language in NSLocale.preferredLanguages) {
+        NSString *iso = [language stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
+        
+        NSArray *match = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self BEGINSWITH[c] %@", iso]];
+        if (match.count) {
+            self.language = iso;
+            return match.firstObject;
+        }
+        
+        NSScanner *scanner = [[NSScanner alloc] initWithString:iso];
+        if(![scanner scanUpToString:@"_" intoString:&iso]) {
+            continue;
+        }
+        
+        match = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self BEGINSWITH[c] %@", iso]];
+        if (match.count) {
+            self.language = iso;
+            return match.firstObject;
+        }
+    }
+    
+    return nil;
 }
 
 - (NSString *)localizedStringForMsgid:(NSString *)msgid context:(nullable NSString *)context {
