@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name                 = 'POLocalizedString'
-  spec.version              = '0.1.0'
+  spec.version              = '0.1.1'
   spec.license              = 'MIT'
   spec.homepage             = 'https://git.hulab.co/hulab/POLocalizedString'
   spec.authors              = { 'Andrej Mihajlov' => 'and@codeispoetry.ru' }
