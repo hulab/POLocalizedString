@@ -61,8 +61,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Sets a header value.
 
- @param header The header key.
- @param value The headet value.
+ @param header The header value.
+ @param key The header key.
  */
 - (void)setHeader:(NSString *)header forKey:(NSString *)key;
 

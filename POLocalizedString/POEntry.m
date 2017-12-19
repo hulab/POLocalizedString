@@ -61,22 +61,21 @@
     NSMutableString *description = [NSMutableString stringWithFormat:@"new entry\nsingular: %@\nplural: %@\ntranslator comments:%@\n", self.msgid, self.msgid_plural, self.translator_comments];
 	
 	[description appendString:@"translations:\n"];
-     
-	
+    
     for (NSUInteger i = 0; i < self.translations.count; ++i) {
-        [description appendFormat:@"[%lu] %@\n", i++, self.translations[i]];
+        [description appendFormat:@"[%lu] %@\n", (unsigned long)i++, self.translations[i]];
 	}
 	
     [description appendString:@"references:\n"];
     
     for (NSUInteger i = 0; i < self.references.count; ++i) {
-        [description appendFormat:@"[%lu] %@\n", i++, self.references[i]];
+        [description appendFormat:@"[%lu] %@\n", (unsigned long)i++, self.references[i]];
     }
     
     [description appendString:@"flags:\n"];
     
     for (NSUInteger i = 0; i < self.flags.count; ++i) {
-        [description appendFormat:@"[%lu] %@\n", i++, self.flags[i]];
+        [description appendFormat:@"[%lu] %@\n", (unsigned long)i++, self.flags[i]];
     }
 	
     [description appendString:@"--"];
