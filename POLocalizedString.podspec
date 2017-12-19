@@ -1,20 +1,25 @@
-Pod::Spec.new do |spec|
+Pod::Spec.new do |s|
 
-  spec.name                 = 'POLocalizedString'
-  spec.version              = '0.2.0'
-  spec.license              = 'MIT'
-  spec.homepage             = 'https://git.hulab.co/hulab/POLocalizedString'
-  spec.authors              = { 'Andrej Mihajlov' => 'and@codeispoetry.ru' }
-  spec.summary              = 'Gettext translations for iOS.'
-  spec.source               = { :git => 'https://git.hulab.co/hulab/POLocalizedString.git', :tag => spec.version.to_s, :submodules => true }
+  s.name                 = 'POLocalizedString'
+  s.version              = '0.3.0'
+  s.license              = 'MIT'
+  s.homepage             = 'https://git.hulab.co/hulab/POLocalizedString'
+  s.authors              = { 'Maxime Epain' => 'maxime@mpastr.com' }
+  s.summary              = 'Gettext translations for iOS.'
+  s.source               = { :git => 'https://git.hulab.co/hulab/POLocalizedString.git', :tag => s.version.to_s, :submodules => true }
 
-  spec.source_files         = 'POLocalizedString/*.{h,m,mm,swift}', 'muParser/src/*.cpp', 'muParser/include/*.h'
-  spec.exclude_files        = 'muParser/src/muParserTest.cpp', 'muParser/src/muParserTest.h'
-  spec.private_header_files = 'muParser/include/*.h'
+  s.source_files         = 'POLocalizedString/*.{h,m,mm,swift}', 'muParser/src/*.cpp', 'muParser/include/*.h'
+  s.exclude_files        = 'muParser/src/muParserTest.cpp', 'muParser/src/muParserTest.h'
+  s.private_header_files = 'muParser/include/*.h'
 
-  spec.framework            = 'Foundation'
-  spec.libraries            = 'c++'
-  spec.requires_arc         = true
-  spec.platform             = :ios, '8.0'
+  s.framework            = 'Foundation'
+  s.libraries            = 'c++'
+  s.requires_arc         = true
+
+  s.platform = :ios, :osx, :tvos, :watchos
+  s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.9'
+  s.tvos.deployment_target = '9.0'
+  s.watchos.deployment_target = '2.0'
 
 end

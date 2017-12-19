@@ -101,7 +101,7 @@ static NSBundle *localizedBundle = nil;
     if (!gettext) {
         
         NSString *file = [self localizedFile];
-        NSString *path = [self.bundlePath stringByAppendingPathComponent:file];
+        NSString *path = [self.resourcePath stringByAppendingPathComponent:file];
         
         if ([file hasSuffix:@".mo"]) {
             gettext = [MOParser loadFile:path];
@@ -122,7 +122,7 @@ static NSBundle *localizedBundle = nil;
     NSFileManager *manager = [NSFileManager defaultManager];
     
     NSError *error = nil;
-    NSArray<NSString *> *files = [manager contentsOfDirectoryAtPath:self.bundlePath error:&error];
+    NSArray<NSString *> *files = [manager contentsOfDirectoryAtPath:self.resourcePath error:&error];
     if (!files) {
         NSLog(@"Error: %@", error);
         return nil;
@@ -146,7 +146,7 @@ static NSBundle *localizedBundle = nil;
         NSLog(@"The specified language is not available");
     }
     
-    // Interate throught preferred languages to get a match.
+    // Iterate through preferred languages to get a match.
     for (NSString *language in NSLocale.preferredLanguages) {
         NSString *iso = [language stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
         

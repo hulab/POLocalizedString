@@ -8,6 +8,126 @@
 
 /* Begin PBXBuildFile section */
 		9C0E7F181FDE919E003AECCE /* template.pot in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F141FDE919D003AECCE /* template.pot */; };
+		9C5A2A6F1FE91C3A00DEED01 /* POLocalizedString-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF701FD59049007F965D /* POLocalizedString-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5A2A701FE91C4C00DEED01 /* muParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7C1FD59244007F965D /* muParser.h */; };
+		9C5A2A711FE91C4C00DEED01 /* muParserBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7D1FD59244007F965D /* muParserBase.h */; };
+		9C5A2A721FE91C4C00DEED01 /* muParserBytecode.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7E1FD59244007F965D /* muParserBytecode.h */; };
+		9C5A2A731FE91C4C00DEED01 /* muParserCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7F1FD59244007F965D /* muParserCallback.h */; };
+		9C5A2A741FE91C4C00DEED01 /* muParserDef.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF801FD59244007F965D /* muParserDef.h */; };
+		9C5A2A751FE91C4C00DEED01 /* muParserDLL.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF811FD59244007F965D /* muParserDLL.h */; };
+		9C5A2A761FE91C4C00DEED01 /* muParserError.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF821FD59244007F965D /* muParserError.h */; };
+		9C5A2A771FE91C4C00DEED01 /* muParserFixes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF831FD59244007F965D /* muParserFixes.h */; };
+		9C5A2A781FE91C4C00DEED01 /* muParserInt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF841FD59244007F965D /* muParserInt.h */; };
+		9C5A2A791FE91C4C00DEED01 /* muParserStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF851FD59244007F965D /* muParserStack.h */; };
+		9C5A2A7A1FE91C4C00DEED01 /* muParserTemplateMagic.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF861FD59244007F965D /* muParserTemplateMagic.h */; };
+		9C5A2A7B1FE91C4C00DEED01 /* muParserTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF871FD59244007F965D /* muParserTest.h */; };
+		9C5A2A7C1FE91C4C00DEED01 /* muParserToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF881FD59244007F965D /* muParserToken.h */; };
+		9C5A2A7D1FE91C4C00DEED01 /* muParserTokenReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF891FD59244007F965D /* muParserTokenReader.h */; };
+		9C5A2A7E1FE91C5E00DEED01 /* Gettext.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4C1FD5903C007F965D /* Gettext.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2A7F1FE91C5E00DEED01 /* Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CEBA8081FDEC2F500F8F211 /* Parser.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2A801FE91C5E00DEED01 /* MOParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4E1FD5903C007F965D /* MOParser.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2A811FE91C5E00DEED01 /* POParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF531FD5903C007F965D /* POParser.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2A821FE91C5E00DEED01 /* POEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF571FD5903C007F965D /* POEntry.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2A831FE91CC800DEED01 /* POLocalizedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF00461FD5A30C007F965D /* POLocalizedString.m */; };
+		9C5A2A841FE91CC800DEED01 /* POLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFAA291FD9463F00A5E40F /* POLocalizedString.swift */; };
+		9C5A2A851FE91CC800DEED01 /* Gettext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF4D1FD5903C007F965D /* Gettext.mm */; };
+		9C5A2A861FE91CC800DEED01 /* MOParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF4F1FD5903C007F965D /* MOParser.m */; };
+		9C5A2A871FE91CC800DEED01 /* POParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF541FD5903C007F965D /* POParser.m */; };
+		9C5A2A881FE91CC800DEED01 /* POEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF581FD5903C007F965D /* POEntry.m */; };
+		9C5A2A891FE91CC800DEED01 /* muParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8B1FD59244007F965D /* muParser.cpp */; };
+		9C5A2A8A1FE91CC800DEED01 /* muParserBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8C1FD59244007F965D /* muParserBase.cpp */; };
+		9C5A2A8B1FE91CC800DEED01 /* muParserBytecode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8D1FD59244007F965D /* muParserBytecode.cpp */; };
+		9C5A2A8C1FE91CC800DEED01 /* muParserCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8E1FD59244007F965D /* muParserCallback.cpp */; };
+		9C5A2A8D1FE91CC800DEED01 /* muParserDLL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8F1FD59244007F965D /* muParserDLL.cpp */; };
+		9C5A2A8E1FE91CC800DEED01 /* muParserError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF901FD59244007F965D /* muParserError.cpp */; };
+		9C5A2A8F1FE91CC800DEED01 /* muParserInt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF911FD59244007F965D /* muParserInt.cpp */; };
+		9C5A2A901FE91CC800DEED01 /* muParserTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF921FD59244007F965D /* muParserTest.cpp */; };
+		9C5A2A911FE91CC800DEED01 /* muParserTokenReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF931FD59244007F965D /* muParserTokenReader.cpp */; };
+		9C5A2AD21FE921EE00DEED01 /* POLocalizedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF00461FD5A30C007F965D /* POLocalizedString.m */; };
+		9C5A2AD31FE921EE00DEED01 /* POLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFAA291FD9463F00A5E40F /* POLocalizedString.swift */; };
+		9C5A2AD41FE921EE00DEED01 /* Gettext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF4D1FD5903C007F965D /* Gettext.mm */; };
+		9C5A2AD51FE921EE00DEED01 /* MOParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF4F1FD5903C007F965D /* MOParser.m */; };
+		9C5A2AD61FE921EE00DEED01 /* POParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF541FD5903C007F965D /* POParser.m */; };
+		9C5A2AD71FE921EE00DEED01 /* POEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF581FD5903C007F965D /* POEntry.m */; };
+		9C5A2AD81FE921EE00DEED01 /* muParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8B1FD59244007F965D /* muParser.cpp */; };
+		9C5A2AD91FE921EE00DEED01 /* muParserBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8C1FD59244007F965D /* muParserBase.cpp */; };
+		9C5A2ADA1FE921EE00DEED01 /* muParserBytecode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8D1FD59244007F965D /* muParserBytecode.cpp */; };
+		9C5A2ADB1FE921EE00DEED01 /* muParserCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8E1FD59244007F965D /* muParserCallback.cpp */; };
+		9C5A2ADC1FE921EE00DEED01 /* muParserDLL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8F1FD59244007F965D /* muParserDLL.cpp */; };
+		9C5A2ADD1FE921EE00DEED01 /* muParserError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF901FD59244007F965D /* muParserError.cpp */; };
+		9C5A2ADE1FE921EE00DEED01 /* muParserInt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF911FD59244007F965D /* muParserInt.cpp */; };
+		9C5A2ADF1FE921EE00DEED01 /* muParserTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF921FD59244007F965D /* muParserTest.cpp */; };
+		9C5A2AE01FE921EE00DEED01 /* muParserTokenReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF931FD59244007F965D /* muParserTokenReader.cpp */; };
+		9C5A2AE11FE9221200DEED01 /* POLocalizedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4A1FD5903C007F965D /* POLocalizedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5A2AE21FE9221200DEED01 /* Gettext.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4C1FD5903C007F965D /* Gettext.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2AE31FE9221200DEED01 /* Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CEBA8081FDEC2F500F8F211 /* Parser.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2AE41FE9221200DEED01 /* POParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF531FD5903C007F965D /* POParser.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2AE51FE9221200DEED01 /* POEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF571FD5903C007F965D /* POEntry.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2AE61FE9222A00DEED01 /* MOParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4E1FD5903C007F965D /* MOParser.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2AE71FE9223300DEED01 /* muParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7C1FD59244007F965D /* muParser.h */; };
+		9C5A2AE81FE9223300DEED01 /* muParserBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7D1FD59244007F965D /* muParserBase.h */; };
+		9C5A2AE91FE9223300DEED01 /* muParserBytecode.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7E1FD59244007F965D /* muParserBytecode.h */; };
+		9C5A2AEA1FE9223300DEED01 /* muParserCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7F1FD59244007F965D /* muParserCallback.h */; };
+		9C5A2AEB1FE9223300DEED01 /* muParserDef.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF801FD59244007F965D /* muParserDef.h */; };
+		9C5A2AEC1FE9223300DEED01 /* muParserDLL.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF811FD59244007F965D /* muParserDLL.h */; };
+		9C5A2AED1FE9223300DEED01 /* muParserError.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF821FD59244007F965D /* muParserError.h */; };
+		9C5A2AEE1FE9223300DEED01 /* muParserFixes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF831FD59244007F965D /* muParserFixes.h */; };
+		9C5A2AEF1FE9223300DEED01 /* muParserInt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF841FD59244007F965D /* muParserInt.h */; };
+		9C5A2AF01FE9223300DEED01 /* muParserStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF851FD59244007F965D /* muParserStack.h */; };
+		9C5A2AF11FE9223300DEED01 /* muParserTemplateMagic.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF861FD59244007F965D /* muParserTemplateMagic.h */; };
+		9C5A2AF21FE9223300DEED01 /* muParserTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF871FD59244007F965D /* muParserTest.h */; };
+		9C5A2AF31FE9223300DEED01 /* muParserToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF881FD59244007F965D /* muParserToken.h */; };
+		9C5A2AF41FE9223300DEED01 /* muParserTokenReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF891FD59244007F965D /* muParserTokenReader.h */; };
+		9C5A2AF51FE9223500DEED01 /* POLocalizedString-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF701FD59049007F965D /* POLocalizedString-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5A2B101FE9259100DEED01 /* POLocalizedString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5A2ACA1FE921CF00DEED01 /* POLocalizedString.framework */; };
+		9C5A2B161FE925B800DEED01 /* POLocalizedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE0052F1FE06DF100E31086 /* POLocalizedStringTests.m */; };
+		9C5A2B171FE925B800DEED01 /* MOLocalizedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF731FD59059007F965D /* MOLocalizedStringTests.m */; };
+		9C5A2B181FE925C500DEED01 /* mo.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9CE0052B1FE06DED00E31086 /* mo.mo */; };
+		9C5A2B191FE925C500DEED01 /* po.po in Resources */ = {isa = PBXBuildFile; fileRef = 9CE0052C1FE06DED00E31086 /* po.po */; };
+		9C5A2B1A1FE925C500DEED01 /* template.pot in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F141FDE919D003AECCE /* template.pot */; };
+		9C5A2B291FE926A000DEED01 /* POLocalizedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE0052F1FE06DF100E31086 /* POLocalizedStringTests.m */; };
+		9C5A2B2A1FE926A000DEED01 /* MOLocalizedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF731FD59059007F965D /* MOLocalizedStringTests.m */; };
+		9C5A2B2B1FE926A800DEED01 /* mo.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9CE0052B1FE06DED00E31086 /* mo.mo */; };
+		9C5A2B2C1FE926A800DEED01 /* po.po in Resources */ = {isa = PBXBuildFile; fileRef = 9CE0052C1FE06DED00E31086 /* po.po */; };
+		9C5A2B2D1FE926A800DEED01 /* template.pot in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F141FDE919D003AECCE /* template.pot */; };
+		9C5A2B2E1FE9276800DEED01 /* POLocalizedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4A1FD5903C007F965D /* POLocalizedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5A2B431FE92D6200DEED01 /* POLocalizedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF00461FD5A30C007F965D /* POLocalizedString.m */; };
+		9C5A2B441FE92D6200DEED01 /* POLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFAA291FD9463F00A5E40F /* POLocalizedString.swift */; };
+		9C5A2B451FE92D6200DEED01 /* Gettext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF4D1FD5903C007F965D /* Gettext.mm */; };
+		9C5A2B461FE92D6200DEED01 /* MOParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF4F1FD5903C007F965D /* MOParser.m */; };
+		9C5A2B471FE92D6200DEED01 /* POParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF541FD5903C007F965D /* POParser.m */; };
+		9C5A2B481FE92D6200DEED01 /* POEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF581FD5903C007F965D /* POEntry.m */; };
+		9C5A2B491FE92D6200DEED01 /* muParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8B1FD59244007F965D /* muParser.cpp */; };
+		9C5A2B4A1FE92D6200DEED01 /* muParserBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8C1FD59244007F965D /* muParserBase.cpp */; };
+		9C5A2B4B1FE92D6200DEED01 /* muParserBytecode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8D1FD59244007F965D /* muParserBytecode.cpp */; };
+		9C5A2B4C1FE92D6200DEED01 /* muParserCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8E1FD59244007F965D /* muParserCallback.cpp */; };
+		9C5A2B4D1FE92D6200DEED01 /* muParserDLL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF8F1FD59244007F965D /* muParserDLL.cpp */; };
+		9C5A2B4E1FE92D6200DEED01 /* muParserError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF901FD59244007F965D /* muParserError.cpp */; };
+		9C5A2B4F1FE92D6200DEED01 /* muParserInt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF911FD59244007F965D /* muParserInt.cpp */; };
+		9C5A2B501FE92D6200DEED01 /* muParserTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF921FD59244007F965D /* muParserTest.cpp */; };
+		9C5A2B511FE92D6200DEED01 /* muParserTokenReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFF931FD59244007F965D /* muParserTokenReader.cpp */; };
+		9C5A2B521FE92D9400DEED01 /* POLocalizedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4A1FD5903C007F965D /* POLocalizedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5A2B531FE92D9400DEED01 /* Gettext.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4C1FD5903C007F965D /* Gettext.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2B541FE92D9400DEED01 /* Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CEBA8081FDEC2F500F8F211 /* Parser.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2B551FE92D9400DEED01 /* MOParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4E1FD5903C007F965D /* MOParser.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2B561FE92D9400DEED01 /* POParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF531FD5903C007F965D /* POParser.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2B571FE92D9400DEED01 /* POEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF571FD5903C007F965D /* POEntry.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C5A2B581FE92D9E00DEED01 /* muParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7C1FD59244007F965D /* muParser.h */; };
+		9C5A2B591FE92D9E00DEED01 /* muParserBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7D1FD59244007F965D /* muParserBase.h */; };
+		9C5A2B5A1FE92D9E00DEED01 /* muParserBytecode.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7E1FD59244007F965D /* muParserBytecode.h */; };
+		9C5A2B5B1FE92D9E00DEED01 /* muParserCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7F1FD59244007F965D /* muParserCallback.h */; };
+		9C5A2B5C1FE92D9E00DEED01 /* muParserDef.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF801FD59244007F965D /* muParserDef.h */; };
+		9C5A2B5D1FE92D9E00DEED01 /* muParserDLL.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF811FD59244007F965D /* muParserDLL.h */; };
+		9C5A2B5E1FE92D9E00DEED01 /* muParserError.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF821FD59244007F965D /* muParserError.h */; };
+		9C5A2B5F1FE92D9E00DEED01 /* muParserFixes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF831FD59244007F965D /* muParserFixes.h */; };
+		9C5A2B601FE92D9E00DEED01 /* muParserInt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF841FD59244007F965D /* muParserInt.h */; };
+		9C5A2B611FE92D9E00DEED01 /* muParserStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF851FD59244007F965D /* muParserStack.h */; };
+		9C5A2B621FE92D9E00DEED01 /* muParserTemplateMagic.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF861FD59244007F965D /* muParserTemplateMagic.h */; };
+		9C5A2B631FE92D9E00DEED01 /* muParserTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF871FD59244007F965D /* muParserTest.h */; };
+		9C5A2B641FE92D9E00DEED01 /* muParserToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF881FD59244007F965D /* muParserToken.h */; };
+		9C5A2B651FE92D9E00DEED01 /* muParserTokenReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF891FD59244007F965D /* muParserTokenReader.h */; };
+		9C5A2B661FE92DAF00DEED01 /* POLocalizedString-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF701FD59049007F965D /* POLocalizedString-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5A2B671FE92F4200DEED01 /* POLocalizedString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5A2B3B1FE92CF500DEED01 /* POLocalizedString.framework */; };
 		9CCF00471FD5A30C007F965D /* POLocalizedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF00461FD5A30C007F965D /* POLocalizedString.m */; };
 		9CCFFF391FD58E12007F965D /* POLocalizedString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCFFF2F1FD58E12007F965D /* POLocalizedString.framework */; };
 		9CCFFF5C1FD5903C007F965D /* POLocalizedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF4A1FD5903C007F965D /* POLocalizedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,11 +167,25 @@
 		9CE0052D1FE06DED00E31086 /* mo.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9CE0052B1FE06DED00E31086 /* mo.mo */; };
 		9CE0052E1FE06DED00E31086 /* po.po in Resources */ = {isa = PBXBuildFile; fileRef = 9CE0052C1FE06DED00E31086 /* po.po */; };
 		9CE005301FE06DF100E31086 /* POLocalizedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE0052F1FE06DF100E31086 /* POLocalizedStringTests.m */; };
-		9CEBA8091FDEC2F500F8F211 /* Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CEBA8081FDEC2F500F8F211 /* Parser.h */; };
+		9CEBA8091FDEC2F500F8F211 /* Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CEBA8081FDEC2F500F8F211 /* Parser.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CEFAA2A1FD9463F00A5E40F /* POLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFAA291FD9463F00A5E40F /* POLocalizedString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9C5A2B111FE9259100DEED01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CCFFF261FD58E12007F965D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C5A2AC91FE921CF00DEED01;
+			remoteInfo = "POLocalizedString macOS";
+		};
+		9C5A2B681FE92F4500DEED01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CCFFF261FD58E12007F965D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C5A2B3A1FE92CF500DEED01;
+			remoteInfo = "POLocalizedString tvOS";
+		};
 		9CCFFF3A1FD58E12007F965D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9CCFFF261FD58E12007F965D /* Project object */;
@@ -63,9 +197,14 @@
 
 /* Begin PBXFileReference section */
 		9C0E7F141FDE919D003AECCE /* template.pot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.pot; sourceTree = "<group>"; };
+		9C5A2A671FE91BC600DEED01 /* POLocalizedString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = POLocalizedString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C5A2ACA1FE921CF00DEED01 /* POLocalizedString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = POLocalizedString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C5A2B0B1FE9259100DEED01 /* POLocalizedStringTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "POLocalizedStringTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C5A2B1F1FE9266600DEED01 /* POLocalizedStringTests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "POLocalizedStringTests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C5A2B3B1FE92CF500DEED01 /* POLocalizedString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = POLocalizedString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCF00461FD5A30C007F965D /* POLocalizedString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POLocalizedString.m; sourceTree = "<group>"; };
 		9CCFFF2F1FD58E12007F965D /* POLocalizedString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = POLocalizedString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CCFFF381FD58E12007F965D /* POLocalizedStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POLocalizedStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CCFFF381FD58E12007F965D /* POLocalizedStringTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "POLocalizedStringTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCFFF4A1FD5903C007F965D /* POLocalizedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POLocalizedString.h; sourceTree = "<group>"; };
 		9CCFFF4C1FD5903C007F965D /* Gettext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gettext.h; sourceTree = "<group>"; };
 		9CCFFF4D1FD5903C007F965D /* Gettext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Gettext.mm; sourceTree = "<group>"; };
@@ -114,6 +253,43 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9C5A2A631FE91BC600DEED01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5A2AC61FE921CF00DEED01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5A2B081FE9259100DEED01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5A2B101FE9259100DEED01 /* POLocalizedString.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5A2B1C1FE9266600DEED01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5A2B671FE92F4200DEED01 /* POLocalizedString.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5A2B371FE92CF500DEED01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CCFFF2B1FD58E12007F965D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +308,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C5A2B311FE92AD500DEED01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9CCFFF251FD58E12007F965D = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +324,7 @@
 				9CCFFF6E1FD59049007F965D /* Framework */,
 				9CCFFF711FD59059007F965D /* Tests */,
 				9CCFFF301FD58E12007F965D /* Products */,
+				9C5A2B311FE92AD500DEED01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,7 +332,12 @@
 			isa = PBXGroup;
 			children = (
 				9CCFFF2F1FD58E12007F965D /* POLocalizedString.framework */,
-				9CCFFF381FD58E12007F965D /* POLocalizedStringTests.xctest */,
+				9CCFFF381FD58E12007F965D /* POLocalizedStringTests iOS.xctest */,
+				9C5A2A671FE91BC600DEED01 /* POLocalizedString.framework */,
+				9C5A2ACA1FE921CF00DEED01 /* POLocalizedString.framework */,
+				9C5A2B0B1FE9259100DEED01 /* POLocalizedStringTests macOS.xctest */,
+				9C5A2B1F1FE9266600DEED01 /* POLocalizedStringTests tvOS.xctest */,
+				9C5A2B3B1FE92CF500DEED01 /* POLocalizedString.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -256,6 +445,90 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		9C5A2A641FE91BC600DEED01 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5A2A6F1FE91C3A00DEED01 /* POLocalizedString-umbrella.h in Headers */,
+				9C5A2B2E1FE9276800DEED01 /* POLocalizedString.h in Headers */,
+				9C5A2A7E1FE91C5E00DEED01 /* Gettext.h in Headers */,
+				9C5A2A7F1FE91C5E00DEED01 /* Parser.h in Headers */,
+				9C5A2A801FE91C5E00DEED01 /* MOParser.h in Headers */,
+				9C5A2A811FE91C5E00DEED01 /* POParser.h in Headers */,
+				9C5A2A821FE91C5E00DEED01 /* POEntry.h in Headers */,
+				9C5A2A701FE91C4C00DEED01 /* muParser.h in Headers */,
+				9C5A2A711FE91C4C00DEED01 /* muParserBase.h in Headers */,
+				9C5A2A721FE91C4C00DEED01 /* muParserBytecode.h in Headers */,
+				9C5A2A731FE91C4C00DEED01 /* muParserCallback.h in Headers */,
+				9C5A2A741FE91C4C00DEED01 /* muParserDef.h in Headers */,
+				9C5A2A751FE91C4C00DEED01 /* muParserDLL.h in Headers */,
+				9C5A2A761FE91C4C00DEED01 /* muParserError.h in Headers */,
+				9C5A2A771FE91C4C00DEED01 /* muParserFixes.h in Headers */,
+				9C5A2A781FE91C4C00DEED01 /* muParserInt.h in Headers */,
+				9C5A2A791FE91C4C00DEED01 /* muParserStack.h in Headers */,
+				9C5A2A7A1FE91C4C00DEED01 /* muParserTemplateMagic.h in Headers */,
+				9C5A2A7B1FE91C4C00DEED01 /* muParserTest.h in Headers */,
+				9C5A2A7C1FE91C4C00DEED01 /* muParserToken.h in Headers */,
+				9C5A2A7D1FE91C4C00DEED01 /* muParserTokenReader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5A2AC71FE921CF00DEED01 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5A2AE11FE9221200DEED01 /* POLocalizedString.h in Headers */,
+				9C5A2AF51FE9223500DEED01 /* POLocalizedString-umbrella.h in Headers */,
+				9C5A2AE21FE9221200DEED01 /* Gettext.h in Headers */,
+				9C5A2AE31FE9221200DEED01 /* Parser.h in Headers */,
+				9C5A2AE41FE9221200DEED01 /* POParser.h in Headers */,
+				9C5A2AE61FE9222A00DEED01 /* MOParser.h in Headers */,
+				9C5A2AE51FE9221200DEED01 /* POEntry.h in Headers */,
+				9C5A2AE71FE9223300DEED01 /* muParser.h in Headers */,
+				9C5A2AE81FE9223300DEED01 /* muParserBase.h in Headers */,
+				9C5A2AE91FE9223300DEED01 /* muParserBytecode.h in Headers */,
+				9C5A2AEA1FE9223300DEED01 /* muParserCallback.h in Headers */,
+				9C5A2AEB1FE9223300DEED01 /* muParserDef.h in Headers */,
+				9C5A2AEC1FE9223300DEED01 /* muParserDLL.h in Headers */,
+				9C5A2AED1FE9223300DEED01 /* muParserError.h in Headers */,
+				9C5A2AEE1FE9223300DEED01 /* muParserFixes.h in Headers */,
+				9C5A2AEF1FE9223300DEED01 /* muParserInt.h in Headers */,
+				9C5A2AF01FE9223300DEED01 /* muParserStack.h in Headers */,
+				9C5A2AF11FE9223300DEED01 /* muParserTemplateMagic.h in Headers */,
+				9C5A2AF21FE9223300DEED01 /* muParserTest.h in Headers */,
+				9C5A2AF31FE9223300DEED01 /* muParserToken.h in Headers */,
+				9C5A2AF41FE9223300DEED01 /* muParserTokenReader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5A2B381FE92CF500DEED01 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5A2B521FE92D9400DEED01 /* POLocalizedString.h in Headers */,
+				9C5A2B661FE92DAF00DEED01 /* POLocalizedString-umbrella.h in Headers */,
+				9C5A2B531FE92D9400DEED01 /* Gettext.h in Headers */,
+				9C5A2B541FE92D9400DEED01 /* Parser.h in Headers */,
+				9C5A2B551FE92D9400DEED01 /* MOParser.h in Headers */,
+				9C5A2B561FE92D9400DEED01 /* POParser.h in Headers */,
+				9C5A2B571FE92D9400DEED01 /* POEntry.h in Headers */,
+				9C5A2B581FE92D9E00DEED01 /* muParser.h in Headers */,
+				9C5A2B591FE92D9E00DEED01 /* muParserBase.h in Headers */,
+				9C5A2B5A1FE92D9E00DEED01 /* muParserBytecode.h in Headers */,
+				9C5A2B5B1FE92D9E00DEED01 /* muParserCallback.h in Headers */,
+				9C5A2B5C1FE92D9E00DEED01 /* muParserDef.h in Headers */,
+				9C5A2B5D1FE92D9E00DEED01 /* muParserDLL.h in Headers */,
+				9C5A2B5E1FE92D9E00DEED01 /* muParserError.h in Headers */,
+				9C5A2B5F1FE92D9E00DEED01 /* muParserFixes.h in Headers */,
+				9C5A2B601FE92D9E00DEED01 /* muParserInt.h in Headers */,
+				9C5A2B611FE92D9E00DEED01 /* muParserStack.h in Headers */,
+				9C5A2B621FE92D9E00DEED01 /* muParserTemplateMagic.h in Headers */,
+				9C5A2B631FE92D9E00DEED01 /* muParserTest.h in Headers */,
+				9C5A2B641FE92D9E00DEED01 /* muParserToken.h in Headers */,
+				9C5A2B651FE92D9E00DEED01 /* muParserTokenReader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CCFFF2C1FD58E12007F965D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,9 +560,99 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9CCFFF2E1FD58E12007F965D /* POLocalizedString */ = {
+		9C5A2A661FE91BC600DEED01 /* POLocalizedString watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CCFFF431FD58E12007F965D /* Build configuration list for PBXNativeTarget "POLocalizedString" */;
+			buildConfigurationList = 9C5A2A6C1FE91BC600DEED01 /* Build configuration list for PBXNativeTarget "POLocalizedString watchOS" */;
+			buildPhases = (
+				9C5A2A621FE91BC600DEED01 /* Sources */,
+				9C5A2A631FE91BC600DEED01 /* Frameworks */,
+				9C5A2A641FE91BC600DEED01 /* Headers */,
+				9C5A2A651FE91BC600DEED01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "POLocalizedString watchOS";
+			productName = POLocalizedString;
+			productReference = 9C5A2A671FE91BC600DEED01 /* POLocalizedString.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9C5A2AC91FE921CF00DEED01 /* POLocalizedString macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C5A2ACF1FE921CF00DEED01 /* Build configuration list for PBXNativeTarget "POLocalizedString macOS" */;
+			buildPhases = (
+				9C5A2AC51FE921CF00DEED01 /* Sources */,
+				9C5A2AC61FE921CF00DEED01 /* Frameworks */,
+				9C5A2AC71FE921CF00DEED01 /* Headers */,
+				9C5A2AC81FE921CF00DEED01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "POLocalizedString macOS";
+			productName = POLocalizedString;
+			productReference = 9C5A2ACA1FE921CF00DEED01 /* POLocalizedString.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9C5A2B0A1FE9259100DEED01 /* POLocalizedStringTests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C5A2B131FE9259100DEED01 /* Build configuration list for PBXNativeTarget "POLocalizedStringTests macOS" */;
+			buildPhases = (
+				9C5A2B071FE9259100DEED01 /* Sources */,
+				9C5A2B081FE9259100DEED01 /* Frameworks */,
+				9C5A2B091FE9259100DEED01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C5A2B121FE9259100DEED01 /* PBXTargetDependency */,
+			);
+			name = "POLocalizedStringTests macOS";
+			productName = POLocalizedStringTests;
+			productReference = 9C5A2B0B1FE9259100DEED01 /* POLocalizedStringTests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9C5A2B1E1FE9266600DEED01 /* POLocalizedStringTests tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C5A2B241FE9266700DEED01 /* Build configuration list for PBXNativeTarget "POLocalizedStringTests tvOS" */;
+			buildPhases = (
+				9C5A2B1B1FE9266600DEED01 /* Sources */,
+				9C5A2B1C1FE9266600DEED01 /* Frameworks */,
+				9C5A2B1D1FE9266600DEED01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C5A2B691FE92F4500DEED01 /* PBXTargetDependency */,
+			);
+			name = "POLocalizedStringTests tvOS";
+			productName = POLocalizedStringTests;
+			productReference = 9C5A2B1F1FE9266600DEED01 /* POLocalizedStringTests tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9C5A2B3A1FE92CF500DEED01 /* POLocalizedString tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C5A2B401FE92CF500DEED01 /* Build configuration list for PBXNativeTarget "POLocalizedString tvOS" */;
+			buildPhases = (
+				9C5A2B361FE92CF500DEED01 /* Sources */,
+				9C5A2B371FE92CF500DEED01 /* Frameworks */,
+				9C5A2B381FE92CF500DEED01 /* Headers */,
+				9C5A2B391FE92CF500DEED01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "POLocalizedString tvOS";
+			productName = POLocalizedString;
+			productReference = 9C5A2B3B1FE92CF500DEED01 /* POLocalizedString.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9CCFFF2E1FD58E12007F965D /* POLocalizedString iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CCFFF431FD58E12007F965D /* Build configuration list for PBXNativeTarget "POLocalizedString iOS" */;
 			buildPhases = (
 				9CCFFF2A1FD58E12007F965D /* Sources */,
 				9CCFFF2B1FD58E12007F965D /* Frameworks */,
@@ -300,14 +663,14 @@
 			);
 			dependencies = (
 			);
-			name = POLocalizedString;
+			name = "POLocalizedString iOS";
 			productName = POLocalizedString;
 			productReference = 9CCFFF2F1FD58E12007F965D /* POLocalizedString.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9CCFFF371FD58E12007F965D /* POLocalizedStringTests */ = {
+		9CCFFF371FD58E12007F965D /* POLocalizedStringTests iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CCFFF461FD58E12007F965D /* Build configuration list for PBXNativeTarget "POLocalizedStringTests" */;
+			buildConfigurationList = 9CCFFF461FD58E12007F965D /* Build configuration list for PBXNativeTarget "POLocalizedStringTests iOS" */;
 			buildPhases = (
 				9CCFFF341FD58E12007F965D /* Sources */,
 				9CCFFF351FD58E12007F965D /* Frameworks */,
@@ -318,9 +681,9 @@
 			dependencies = (
 				9CCFFF3B1FD58E12007F965D /* PBXTargetDependency */,
 			);
-			name = POLocalizedStringTests;
+			name = "POLocalizedStringTests iOS";
 			productName = POLocalizedStringTests;
-			productReference = 9CCFFF381FD58E12007F965D /* POLocalizedStringTests.xctest */;
+			productReference = 9CCFFF381FD58E12007F965D /* POLocalizedStringTests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -332,6 +695,26 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Hulab;
 				TargetAttributes = {
+					9C5A2A661FE91BC600DEED01 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					9C5A2AC91FE921CF00DEED01 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					9C5A2B0A1FE9259100DEED01 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					9C5A2B1E1FE9266600DEED01 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					9C5A2B3A1FE92CF500DEED01 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					9CCFFF2E1FD58E12007F965D = {
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 0910;
@@ -355,13 +738,59 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9CCFFF2E1FD58E12007F965D /* POLocalizedString */,
-				9CCFFF371FD58E12007F965D /* POLocalizedStringTests */,
+				9CCFFF2E1FD58E12007F965D /* POLocalizedString iOS */,
+				9C5A2A661FE91BC600DEED01 /* POLocalizedString watchOS */,
+				9CCFFF371FD58E12007F965D /* POLocalizedStringTests iOS */,
+				9C5A2AC91FE921CF00DEED01 /* POLocalizedString macOS */,
+				9C5A2B0A1FE9259100DEED01 /* POLocalizedStringTests macOS */,
+				9C5A2B3A1FE92CF500DEED01 /* POLocalizedString tvOS */,
+				9C5A2B1E1FE9266600DEED01 /* POLocalizedStringTests tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9C5A2A651FE91BC600DEED01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5A2AC81FE921CF00DEED01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5A2B091FE9259100DEED01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5A2B181FE925C500DEED01 /* mo.mo in Resources */,
+				9C5A2B191FE925C500DEED01 /* po.po in Resources */,
+				9C5A2B1A1FE925C500DEED01 /* template.pot in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5A2B1D1FE9266600DEED01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5A2B2B1FE926A800DEED01 /* mo.mo in Resources */,
+				9C5A2B2C1FE926A800DEED01 /* po.po in Resources */,
+				9C5A2B2D1FE926A800DEED01 /* template.pot in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5A2B391FE92CF500DEED01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CCFFF2D1FD58E12007F965D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -382,6 +811,90 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9C5A2A621FE91BC600DEED01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5A2A831FE91CC800DEED01 /* POLocalizedString.m in Sources */,
+				9C5A2A841FE91CC800DEED01 /* POLocalizedString.swift in Sources */,
+				9C5A2A851FE91CC800DEED01 /* Gettext.mm in Sources */,
+				9C5A2A861FE91CC800DEED01 /* MOParser.m in Sources */,
+				9C5A2A871FE91CC800DEED01 /* POParser.m in Sources */,
+				9C5A2A881FE91CC800DEED01 /* POEntry.m in Sources */,
+				9C5A2A891FE91CC800DEED01 /* muParser.cpp in Sources */,
+				9C5A2A8A1FE91CC800DEED01 /* muParserBase.cpp in Sources */,
+				9C5A2A8B1FE91CC800DEED01 /* muParserBytecode.cpp in Sources */,
+				9C5A2A8C1FE91CC800DEED01 /* muParserCallback.cpp in Sources */,
+				9C5A2A8D1FE91CC800DEED01 /* muParserDLL.cpp in Sources */,
+				9C5A2A8E1FE91CC800DEED01 /* muParserError.cpp in Sources */,
+				9C5A2A8F1FE91CC800DEED01 /* muParserInt.cpp in Sources */,
+				9C5A2A901FE91CC800DEED01 /* muParserTest.cpp in Sources */,
+				9C5A2A911FE91CC800DEED01 /* muParserTokenReader.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5A2AC51FE921CF00DEED01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5A2AD21FE921EE00DEED01 /* POLocalizedString.m in Sources */,
+				9C5A2AD31FE921EE00DEED01 /* POLocalizedString.swift in Sources */,
+				9C5A2AD41FE921EE00DEED01 /* Gettext.mm in Sources */,
+				9C5A2AD51FE921EE00DEED01 /* MOParser.m in Sources */,
+				9C5A2AD61FE921EE00DEED01 /* POParser.m in Sources */,
+				9C5A2AD71FE921EE00DEED01 /* POEntry.m in Sources */,
+				9C5A2AD81FE921EE00DEED01 /* muParser.cpp in Sources */,
+				9C5A2AD91FE921EE00DEED01 /* muParserBase.cpp in Sources */,
+				9C5A2ADA1FE921EE00DEED01 /* muParserBytecode.cpp in Sources */,
+				9C5A2ADB1FE921EE00DEED01 /* muParserCallback.cpp in Sources */,
+				9C5A2ADC1FE921EE00DEED01 /* muParserDLL.cpp in Sources */,
+				9C5A2ADD1FE921EE00DEED01 /* muParserError.cpp in Sources */,
+				9C5A2ADE1FE921EE00DEED01 /* muParserInt.cpp in Sources */,
+				9C5A2ADF1FE921EE00DEED01 /* muParserTest.cpp in Sources */,
+				9C5A2AE01FE921EE00DEED01 /* muParserTokenReader.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5A2B071FE9259100DEED01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5A2B161FE925B800DEED01 /* POLocalizedStringTests.m in Sources */,
+				9C5A2B171FE925B800DEED01 /* MOLocalizedStringTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5A2B1B1FE9266600DEED01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5A2B291FE926A000DEED01 /* POLocalizedStringTests.m in Sources */,
+				9C5A2B2A1FE926A000DEED01 /* MOLocalizedStringTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5A2B361FE92CF500DEED01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5A2B431FE92D6200DEED01 /* POLocalizedString.m in Sources */,
+				9C5A2B441FE92D6200DEED01 /* POLocalizedString.swift in Sources */,
+				9C5A2B451FE92D6200DEED01 /* Gettext.mm in Sources */,
+				9C5A2B461FE92D6200DEED01 /* MOParser.m in Sources */,
+				9C5A2B471FE92D6200DEED01 /* POParser.m in Sources */,
+				9C5A2B481FE92D6200DEED01 /* POEntry.m in Sources */,
+				9C5A2B491FE92D6200DEED01 /* muParser.cpp in Sources */,
+				9C5A2B4A1FE92D6200DEED01 /* muParserBase.cpp in Sources */,
+				9C5A2B4B1FE92D6200DEED01 /* muParserBytecode.cpp in Sources */,
+				9C5A2B4C1FE92D6200DEED01 /* muParserCallback.cpp in Sources */,
+				9C5A2B4D1FE92D6200DEED01 /* muParserDLL.cpp in Sources */,
+				9C5A2B4E1FE92D6200DEED01 /* muParserError.cpp in Sources */,
+				9C5A2B4F1FE92D6200DEED01 /* muParserInt.cpp in Sources */,
+				9C5A2B501FE92D6200DEED01 /* muParserTest.cpp in Sources */,
+				9C5A2B511FE92D6200DEED01 /* muParserTokenReader.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CCFFF2A1FD58E12007F965D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,14 +929,240 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9C5A2B121FE9259100DEED01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C5A2AC91FE921CF00DEED01 /* POLocalizedString macOS */;
+			targetProxy = 9C5A2B111FE9259100DEED01 /* PBXContainerItemProxy */;
+		};
+		9C5A2B691FE92F4500DEED01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C5A2B3A1FE92CF500DEED01 /* POLocalizedString tvOS */;
+			targetProxy = 9C5A2B681FE92F4500DEED01 /* PBXContainerItemProxy */;
+		};
 		9CCFFF3B1FD58E12007F965D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9CCFFF2E1FD58E12007F965D /* POLocalizedString */;
+			target = 9CCFFF2E1FD58E12007F965D /* POLocalizedString iOS */;
 			targetProxy = 9CCFFF3A1FD58E12007F965D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		9C5A2A6D1FE91BC600DEED01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Q95SQ3447E;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = Framework/module.modulemap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.watchos.POLocalizedString;
+				PRODUCT_NAME = POLocalizedString;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		9C5A2A6E1FE91BC600DEED01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Q95SQ3447E;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = Framework/module.modulemap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.watchos.POLocalizedString;
+				PRODUCT_NAME = POLocalizedString;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		9C5A2AD01FE921CF00DEED01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Q95SQ3447E;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = Framework/module.modulemap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.macos.POLocalizedString;
+				PRODUCT_NAME = POLocalizedString;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		9C5A2AD11FE921CF00DEED01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Q95SQ3447E;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = Framework/module.modulemap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.macos.POLocalizedString;
+				PRODUCT_NAME = POLocalizedString;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		9C5A2B141FE9259100DEED01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q95SQ3447E;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.macos.POLocalizedStringTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9C5A2B151FE9259100DEED01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q95SQ3447E;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.macos.POLocalizedStringTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9C5A2B251FE9266700DEED01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q95SQ3447E;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.macos.POLocalizedStringTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		9C5A2B261FE9266700DEED01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q95SQ3447E;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.macos.POLocalizedStringTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		9C5A2B411FE92CF500DEED01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Q95SQ3447E;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = Framework/module.modulemap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.tvos.POLocalizedString;
+				PRODUCT_NAME = POLocalizedString;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		9C5A2B421FE92CF500DEED01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Q95SQ3447E;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = Framework/module.modulemap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.tvos.POLocalizedString;
+				PRODUCT_NAME = POLocalizedString;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		9CCFFF411FD58E12007F965D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -548,13 +1287,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = Framework/module.modulemap;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.POLocalizedString;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.ios.POLocalizedString;
+				PRODUCT_NAME = POLocalizedString;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -572,12 +1312,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = Framework/module.modulemap;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.POLocalizedString;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulab.ios.POLocalizedString;
+				PRODUCT_NAME = POLocalizedString;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -613,6 +1354,51 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9C5A2A6C1FE91BC600DEED01 /* Build configuration list for PBXNativeTarget "POLocalizedString watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C5A2A6D1FE91BC600DEED01 /* Debug */,
+				9C5A2A6E1FE91BC600DEED01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C5A2ACF1FE921CF00DEED01 /* Build configuration list for PBXNativeTarget "POLocalizedString macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C5A2AD01FE921CF00DEED01 /* Debug */,
+				9C5A2AD11FE921CF00DEED01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C5A2B131FE9259100DEED01 /* Build configuration list for PBXNativeTarget "POLocalizedStringTests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C5A2B141FE9259100DEED01 /* Debug */,
+				9C5A2B151FE9259100DEED01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C5A2B241FE9266700DEED01 /* Build configuration list for PBXNativeTarget "POLocalizedStringTests tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C5A2B251FE9266700DEED01 /* Debug */,
+				9C5A2B261FE9266700DEED01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C5A2B401FE92CF500DEED01 /* Build configuration list for PBXNativeTarget "POLocalizedString tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C5A2B411FE92CF500DEED01 /* Debug */,
+				9C5A2B421FE92CF500DEED01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9CCFFF291FD58E12007F965D /* Build configuration list for PBXProject "POLocalizedString" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -622,7 +1408,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CCFFF431FD58E12007F965D /* Build configuration list for PBXNativeTarget "POLocalizedString" */ = {
+		9CCFFF431FD58E12007F965D /* Build configuration list for PBXNativeTarget "POLocalizedString iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9CCFFF441FD58E12007F965D /* Debug */,
@@ -631,7 +1417,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CCFFF461FD58E12007F965D /* Build configuration list for PBXNativeTarget "POLocalizedStringTests" */ = {
+		9CCFFF461FD58E12007F965D /* Build configuration list for PBXNativeTarget "POLocalizedStringTests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9CCFFF471FD58E12007F965D /* Debug */,
