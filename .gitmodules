@@ -1,3 +1,3 @@
 [submodule "muParser"]
 	path = muParser
-	url = https://github.com/beltoforion/muparser.git
+url=https://git.hulab.co/hulab/muParser.git
