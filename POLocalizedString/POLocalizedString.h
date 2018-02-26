@@ -23,6 +23,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "POFormat.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -122,6 +124,12 @@ FOUNDATION_EXTERN NSString *POLocalizedPluralFormatFromContextInBundle(NSBundle 
 @property (nonatomic, copy, null_resettable) NSString *language;
 
 /**
+ The strings format converting arguments to objc-format.
+ cf.: https://www.gnu.org/software/gettext/manual/gettext.html#Translators-for-other-Languages
+ */
+@property (nonatomic, strong, null_resettable) id<POFormat> format;
+
+/**
  Returns a localized version of the string designated by the specified msgid with the given context.
 
  @param msgid The msgid for a string in the template file.
@@ -199,10 +207,5 @@ FOUNDATION_EXTERN NSString *POLocalizedPluralFormatFromContextInBundle(NSBundle 
 + (instancetype)localizedStringFromContext:(NSString *)context bundle:(NSBundle *)bundle msgid:(NSString *)msgid, ... NS_FORMAT_FUNCTION(3,4);
 
 @end
-
-#define _(msgid) POLocalizedString(msgid)
-#define _x(msgid,ctx) POLocalizedStringFromContext(msgid,ctx)
-#define _n(msgid,msgid_plural,n) POLocalizedPluralFormat(msgid,msgid_plural,n)
-#define _nx(msgid,msgid_plural,n,ctx) POLocalizedPluralFormatFromContext(msgid,msgid_plural,n,ctx)
 
 NS_ASSUME_NONNULL_END

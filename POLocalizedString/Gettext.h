@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Gettext catalog entries.
  */
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, POEntry *> *entries;
+@property (nonatomic, readonly, copy) NSArray<POEntry *> *entries;
 
 /**
  Number of plurals form.
@@ -75,24 +75,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSUInteger)selectPluralForm:(NSInteger)count;
 
 /**
- Gets a string with the given msgid and context.
+ Gets a PO entry with the given msgid and context.
 
  @param msgid The msgid to look up.
  @param context The entry context.
- @return The string value if avaialble, the msgid otherwise.
+ @return The PO entry if avaialble, nil otherwise.
  */
-- (NSString *)stringWithMsgid:(NSString *)msgid context:(nullable NSString *)context;
-
-/**
- Gets a plural format with the given msgid and context.
-
- @param msgid The msgid to look up.
- @param msgid_plural The plural value.
- @param count The count value to evaluate.
- @param context The entry context.
- @return The format value if avaialble, the msgid or msgid_plural otherwise.
- */
-- (NSString *)stringWithMsgid:(NSString *)msgid plural:(NSString *)msgid_plural count:(NSInteger)count context:(nullable NSString *)context;
+- (nullable POEntry *)entryWithMsgId:(NSString *)msgid context:(nullable NSString *)context;
 
 @end
 

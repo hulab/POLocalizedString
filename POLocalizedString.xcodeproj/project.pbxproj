@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		9C0E7F181FDE919E003AECCE /* template.pot in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E7F141FDE919D003AECCE /* template.pot */; };
+		9C2AFF90204457740024B468 /* POFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2AFF8E204457740024B468 /* POFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C2AFF91204457740024B468 /* POFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2AFF8E204457740024B468 /* POFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C2AFF92204457740024B468 /* POFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2AFF8E204457740024B468 /* POFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C2AFF93204457740024B468 /* POFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2AFF8E204457740024B468 /* POFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C2AFF94204457740024B468 /* POFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2AFF8F204457740024B468 /* POFormat.m */; };
+		9C2AFF95204457740024B468 /* POFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2AFF8F204457740024B468 /* POFormat.m */; };
+		9C2AFF96204457740024B468 /* POFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2AFF8F204457740024B468 /* POFormat.m */; };
+		9C2AFF97204457740024B468 /* POFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2AFF8F204457740024B468 /* POFormat.m */; };
+		9C2AFF99204458AF0024B468 /* FormatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2AFF98204458AF0024B468 /* FormatTests.m */; };
+		9C2AFF9B204458D20024B468 /* format.po in Resources */ = {isa = PBXBuildFile; fileRef = 9C2AFF9A204458C30024B468 /* format.po */; };
+		9C2AFF9C204458D60024B468 /* format.po in Resources */ = {isa = PBXBuildFile; fileRef = 9C2AFF9A204458C30024B468 /* format.po */; };
+		9C2AFF9D204458DC0024B468 /* format.po in Resources */ = {isa = PBXBuildFile; fileRef = 9C2AFF9A204458C30024B468 /* format.po */; };
 		9C5A2A6F1FE91C3A00DEED01 /* POLocalizedString-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF701FD59049007F965D /* POLocalizedString-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C5A2A701FE91C4C00DEED01 /* muParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7C1FD59244007F965D /* muParser.h */; };
 		9C5A2A711FE91C4C00DEED01 /* muParserBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFFF7D1FD59244007F965D /* muParserBase.h */; };
@@ -197,6 +209,10 @@
 
 /* Begin PBXFileReference section */
 		9C0E7F141FDE919D003AECCE /* template.pot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.pot; sourceTree = "<group>"; };
+		9C2AFF8E204457740024B468 /* POFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POFormat.h; sourceTree = "<group>"; };
+		9C2AFF8F204457740024B468 /* POFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POFormat.m; sourceTree = "<group>"; };
+		9C2AFF98204458AF0024B468 /* FormatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormatTests.m; sourceTree = "<group>"; };
+		9C2AFF9A204458C30024B468 /* format.po */ = {isa = PBXFileReference; lastKnownFileType = text; path = format.po; sourceTree = "<group>"; };
 		9C5A2A671FE91BC600DEED01 /* POLocalizedString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = POLocalizedString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5A2ACA1FE921CF00DEED01 /* POLocalizedString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = POLocalizedString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5A2B0B1FE9259100DEED01 /* POLocalizedStringTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "POLocalizedStringTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -357,6 +373,8 @@
 				9CCFFF541FD5903C007F965D /* POParser.m */,
 				9CCFFF571FD5903C007F965D /* POEntry.h */,
 				9CCFFF581FD5903C007F965D /* POEntry.m */,
+				9C2AFF8E204457740024B468 /* POFormat.h */,
+				9C2AFF8F204457740024B468 /* POFormat.m */,
 			);
 			path = POLocalizedString;
 			sourceTree = "<group>";
@@ -377,9 +395,11 @@
 				9CCFFF721FD59059007F965D /* Info.plist */,
 				9CE0052B1FE06DED00E31086 /* mo.mo */,
 				9CE0052C1FE06DED00E31086 /* po.po */,
+				9C2AFF9A204458C30024B468 /* format.po */,
 				9C0E7F141FDE919D003AECCE /* template.pot */,
 				9CE0052F1FE06DF100E31086 /* POLocalizedStringTests.m */,
 				9CCFFF731FD59059007F965D /* MOLocalizedStringTests.m */,
+				9C2AFF98204458AF0024B468 /* FormatTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -451,6 +471,7 @@
 			files = (
 				9C5A2A6F1FE91C3A00DEED01 /* POLocalizedString-umbrella.h in Headers */,
 				9C5A2B2E1FE9276800DEED01 /* POLocalizedString.h in Headers */,
+				9C2AFF91204457740024B468 /* POFormat.h in Headers */,
 				9C5A2A7E1FE91C5E00DEED01 /* Gettext.h in Headers */,
 				9C5A2A7F1FE91C5E00DEED01 /* Parser.h in Headers */,
 				9C5A2A801FE91C5E00DEED01 /* MOParser.h in Headers */,
@@ -479,6 +500,7 @@
 			files = (
 				9C5A2AE11FE9221200DEED01 /* POLocalizedString.h in Headers */,
 				9C5A2AF51FE9223500DEED01 /* POLocalizedString-umbrella.h in Headers */,
+				9C2AFF92204457740024B468 /* POFormat.h in Headers */,
 				9C5A2AE21FE9221200DEED01 /* Gettext.h in Headers */,
 				9C5A2AE31FE9221200DEED01 /* Parser.h in Headers */,
 				9C5A2AE41FE9221200DEED01 /* POParser.h in Headers */,
@@ -507,6 +529,7 @@
 			files = (
 				9C5A2B521FE92D9400DEED01 /* POLocalizedString.h in Headers */,
 				9C5A2B661FE92DAF00DEED01 /* POLocalizedString-umbrella.h in Headers */,
+				9C2AFF93204457740024B468 /* POFormat.h in Headers */,
 				9C5A2B531FE92D9400DEED01 /* Gettext.h in Headers */,
 				9C5A2B541FE92D9400DEED01 /* Parser.h in Headers */,
 				9C5A2B551FE92D9400DEED01 /* MOParser.h in Headers */,
@@ -535,6 +558,7 @@
 			files = (
 				9CCFFF9B1FD59244007F965D /* muParserFixes.h in Headers */,
 				9CEBA8091FDEC2F500F8F211 /* Parser.h in Headers */,
+				9C2AFF90204457740024B468 /* POFormat.h in Headers */,
 				9CCFFF9C1FD59244007F965D /* muParserInt.h in Headers */,
 				9CCFFF761FD590C3007F965D /* POLocalizedString-umbrella.h in Headers */,
 				9CCFFF981FD59244007F965D /* muParserDef.h in Headers */,
@@ -771,6 +795,7 @@
 				9C5A2B181FE925C500DEED01 /* mo.mo in Resources */,
 				9C5A2B191FE925C500DEED01 /* po.po in Resources */,
 				9C5A2B1A1FE925C500DEED01 /* template.pot in Resources */,
+				9C2AFF9C204458D60024B468 /* format.po in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,6 +806,7 @@
 				9C5A2B2B1FE926A800DEED01 /* mo.mo in Resources */,
 				9C5A2B2C1FE926A800DEED01 /* po.po in Resources */,
 				9C5A2B2D1FE926A800DEED01 /* template.pot in Resources */,
+				9C2AFF9D204458DC0024B468 /* format.po in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +831,7 @@
 				9CE0052E1FE06DED00E31086 /* po.po in Resources */,
 				9C0E7F181FDE919E003AECCE /* template.pot in Resources */,
 				9CE0052D1FE06DED00E31086 /* mo.mo in Resources */,
+				9C2AFF9B204458D20024B468 /* format.po in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,6 +855,7 @@
 				9C5A2A8D1FE91CC800DEED01 /* muParserDLL.cpp in Sources */,
 				9C5A2A8E1FE91CC800DEED01 /* muParserError.cpp in Sources */,
 				9C5A2A8F1FE91CC800DEED01 /* muParserInt.cpp in Sources */,
+				9C2AFF95204457740024B468 /* POFormat.m in Sources */,
 				9C5A2A901FE91CC800DEED01 /* muParserTest.cpp in Sources */,
 				9C5A2A911FE91CC800DEED01 /* muParserTokenReader.cpp in Sources */,
 			);
@@ -850,6 +878,7 @@
 				9C5A2ADC1FE921EE00DEED01 /* muParserDLL.cpp in Sources */,
 				9C5A2ADD1FE921EE00DEED01 /* muParserError.cpp in Sources */,
 				9C5A2ADE1FE921EE00DEED01 /* muParserInt.cpp in Sources */,
+				9C2AFF96204457740024B468 /* POFormat.m in Sources */,
 				9C5A2ADF1FE921EE00DEED01 /* muParserTest.cpp in Sources */,
 				9C5A2AE01FE921EE00DEED01 /* muParserTokenReader.cpp in Sources */,
 			);
@@ -890,6 +919,7 @@
 				9C5A2B4D1FE92D6200DEED01 /* muParserDLL.cpp in Sources */,
 				9C5A2B4E1FE92D6200DEED01 /* muParserError.cpp in Sources */,
 				9C5A2B4F1FE92D6200DEED01 /* muParserInt.cpp in Sources */,
+				9C2AFF97204457740024B468 /* POFormat.m in Sources */,
 				9C5A2B501FE92D6200DEED01 /* muParserTest.cpp in Sources */,
 				9C5A2B511FE92D6200DEED01 /* muParserTokenReader.cpp in Sources */,
 			);
@@ -912,6 +942,7 @@
 				9CCFFFAA1FD59244007F965D /* muParserTokenReader.cpp in Sources */,
 				9CCFFFA81FD59244007F965D /* muParserInt.cpp in Sources */,
 				9CCFFFA71FD59244007F965D /* muParserError.cpp in Sources */,
+				9C2AFF94204457740024B468 /* POFormat.m in Sources */,
 				9CCFFFA31FD59244007F965D /* muParserBase.cpp in Sources */,
 				9CEFAA2A1FD9463F00A5E40F /* POLocalizedString.swift in Sources */,
 			);
@@ -922,6 +953,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CCFFF751FD59059007F965D /* MOLocalizedStringTests.m in Sources */,
+				9C2AFF99204458AF0024B468 /* FormatTests.m in Sources */,
 				9CE005301FE06DF100E31086 /* POLocalizedStringTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1118,6 +1150,7 @@
 		9C5A2B411FE92CF500DEED01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1142,6 +1175,7 @@
 		9C5A2B421FE92CF500DEED01 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

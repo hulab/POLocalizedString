@@ -55,8 +55,8 @@
     return _headers.copy;
 }
 
-- (NSDictionary<NSString *,POEntry *> *)entries {
-    return _entries.copy;
+- (NSArray<POEntry *> *)entries {
+    return _entries.allValues;
 }
 
 - (void)addEntry:(POEntry *)entry {
@@ -68,31 +68,9 @@
     _entries[key] = entry;
 }
 
-- (NSString *)stringWithMsgid:(NSString *)msgid context:(nullable NSString *)context {
-    
+- (POEntry *)entryWithMsgId:(NSString *)msgid context:(NSString *)context {
     NSString *key = [POEntry keyWithMsgid:msgid context:context];
-    POEntry *entry = _entries[key];
-    
-    if(entry != nil && entry.translations.count) {
-        return entry.translations.firstObject;
-    }
-    
-    return msgid;
-}
-
-- (NSString *)stringWithMsgid:(NSString *)msgid plural:(NSString *)msgid_plural count:(NSInteger)count context:(nullable NSString *)context{
-    
-    NSString *key = [POEntry keyWithMsgid:msgid context:context];
-    POEntry *entry = _entries[key];
-    
-    NSUInteger index = [self selectPluralForm:count];
-    NSUInteger nplurals = [self numPlurals];
-    
-    if(entry != nil && index < nplurals && index < entry.translations.count) {
-        return entry.translations[index];
-    }
-    
-    return count == 1 ? msgid : msgid_plural;
+    return _entries[key];
 }
 
 - (NSDictionary *)_scanPluralFormsString:(NSString *)src {

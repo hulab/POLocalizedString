@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import POLocalizedString
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        Bundle.localized = Bundle(identifier: "com.hulab.POLocalizedString.example.L10n")!
+        Bundle.localized.format = CFormat()
         
         return true
     }

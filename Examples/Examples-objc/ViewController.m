@@ -26,15 +26,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.bundle = [NSBundle bundleWithIdentifier:@"com.hulab.POLocalizedString.example.L10n"];
-    
     /// Title label
     self.titleLabel.text = POLocalizedStringInBundle(self.bundle, @"Choose number of apples");
     
     self.subTitleLabel.text = nil;
     
     NSString *systemVersion = UIDevice.currentDevice.systemVersion;
-    self.versionLabel.text = [NSString stringWithFormat:POLocalizedStringInBundle(self.bundle, @"iOS %s"), systemVersion.UTF8String];
+    self.versionLabel.text = [NSString stringWithFormat:POLocalizedStringInBundle(self.bundle, @"iOS %s"), systemVersion.ascii];
 }
 
 - (IBAction)sliderValueDidChange:(id)sender {

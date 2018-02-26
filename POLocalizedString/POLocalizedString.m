@@ -95,6 +95,19 @@ static NSBundle *localizedBundle = nil;
     objc_setAssociatedObject(self, @selector(gettext), nil, OBJC_ASSOCIATION_RETAIN);
 }
 
+- (id<POFormat>)format {
+    id<POFormat> format = objc_getAssociatedObject(self, @selector(format));
+    if (!format) {
+        format = [[ObjCFormat alloc] init];
+        objc_setAssociatedObject(self, @selector(format), format, OBJC_ASSOCIATION_RETAIN);
+    }
+    return format;
+}
+
+- (void)setFormat:(id<POFormat>)format {
+    objc_setAssociatedObject(self, @selector(format), format, OBJC_ASSOCIATION_RETAIN);
+}
+
 - (Gettext *)gettext {
     Gettext *gettext = objc_getAssociatedObject(self, @selector(gettext));
     
@@ -118,7 +131,6 @@ static NSBundle *localizedBundle = nil;
 }
 
 - (NSString *)localizedFile {
-    
     NSFileManager *manager = [NSFileManager defaultManager];
     
     NSError *error = nil;
@@ -172,11 +184,27 @@ static NSBundle *localizedBundle = nil;
 }
 
 - (NSString *)localizedStringForMsgid:(NSString *)msgid context:(nullable NSString *)context {
-    return [self.gettext stringWithMsgid:msgid context:context];
+    NSString *string = msgid;
+    
+    POEntry *entry = [self.gettext entryWithMsgId:msgid context:context];
+    if(entry != nil && entry.translations.count) {
+        string = entry.translations.firstObject;
+    }
+    
+    return [self.format convertString:string];
 }
 
 - (NSString *)localizedFormatForMsgid:(NSString *)msgid plural:(NSString *)msgid_plural count:(NSInteger)count context:(nullable NSString *)context {
-    return [self.gettext stringWithMsgid:msgid plural:msgid_plural count:count context:context];
+    NSString *string = count == 1 ? msgid : msgid_plural;
+    
+    POEntry *entry = [self.gettext entryWithMsgId:msgid context:context];
+    NSUInteger index = [self.gettext selectPluralForm:count];
+    
+    if(entry != nil && index < self.gettext.numPlurals && index < entry.translations.count) {
+        string = entry.translations[index];
+    }
+    
+    return [self.format convertString:string];
 }
 
 @end
@@ -224,7 +252,7 @@ static NSBundle *localizedBundle = nil;
 }
 
 - (instancetype)initWithMsgid:(NSString *)msgid arguments:(va_list)argList bundle:(NSBundle *)bundle context:(NSString *)context {
-    NSString *format = [bundle.gettext stringWithMsgid:msgid context:context];
+    NSString *format = [bundle localizedStringForMsgid:msgid context:context];
     return [self initWithFormat:format arguments:argList];
 }
 

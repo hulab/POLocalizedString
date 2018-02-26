@@ -6,6 +6,8 @@
 //  Copyright © 2016 pronebird. All rights reserved.
 //
 
+#import <POLocalizedString/POLocalizedString.h>
+
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -16,7 +18,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    NSBundle.localizedBundle = [NSBundle bundleWithIdentifier:@"com.hulab.POLocalizedString.example.L10n"];
+    NSBundle.localizedBundle.format = [[CFormat alloc] init];
+    
     return YES;
 }
 

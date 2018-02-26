@@ -21,21 +21,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bundle = Bundle(identifier: "com.hulab.POLocalizedString.example.L10n")!
-        
         /// Title label
-        titleLabel.text = "Choose number of apples".localized(in: bundle)
+        titleLabel.text = "Choose number of apples".localized
         
         subTitleLabel.text = nil
 
-        versionLabel.text = "iOS %s".localized(in: bundle, with: UIDevice.current.systemVersion.ascii)
+        versionLabel.text = "iOS %s".localized(with: UIDevice.current.systemVersion)
     }
 
     @IBAction func sliderValueDidChange(_ sender: AnyObject) {
         let count = Int(slider.value)
         
         /// Sub-title with number of apples
-        subTitleLabel.text = "%i apple".localized(plural: "%i apples", n: count, in: bundle, with: count)
+        subTitleLabel.text = "%i apple".localized(plural: "%i apples", n: count, with: count)
     }
     
 }

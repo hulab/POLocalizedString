@@ -58,27 +58,33 @@
 }
 
 - (NSString *)description {
-    NSMutableString *description = [NSMutableString stringWithFormat:@"new entry\nsingular: %@\nplural: %@\ntranslator comments:%@\n", self.msgid, self.msgid_plural, self.translator_comments];
-	
-	[description appendString:@"translations:\n"];
+    NSMutableString *description = [NSMutableString stringWithFormat:@"<%@: %p\n", [self class], self];
+    [description appendFormat:@"\tmsgid: %@\n", self.msgid];
     
+    if (self.msgid_plural) {
+        [description appendFormat:@"\tmsgid_plural: %@\n", self.msgid_plural];
+    }
+    
+    if (self.translator_comments) {
+        [description appendFormat:@"\tcomments: %@\n", self.translator_comments];
+    }
+	
+	[description appendString:@"\ttranslations:\n"];
     for (NSUInteger i = 0; i < self.translations.count; ++i) {
-        [description appendFormat:@"[%lu] %@\n", (unsigned long)i++, self.translations[i]];
+        [description appendFormat:@"\t\t[%lu] %@\n", (unsigned long)i, self.translations[i]];
 	}
 	
-    [description appendString:@"references:\n"];
-    
+    [description appendString:@"\treferences:\n"];
     for (NSUInteger i = 0; i < self.references.count; ++i) {
-        [description appendFormat:@"[%lu] %@\n", (unsigned long)i++, self.references[i]];
+        [description appendFormat:@"\t\t[%lu] %@\n", (unsigned long)i, self.references[i]];
     }
     
-    [description appendString:@"flags:\n"];
-    
+    [description appendString:@"\tflags:\n"];
     for (NSUInteger i = 0; i < self.flags.count; ++i) {
-        [description appendFormat:@"[%lu] %@\n", (unsigned long)i++, self.flags[i]];
+        [description appendFormat:@"\t\t[%lu] %@\n", (unsigned long)i, self.flags[i]];
     }
 	
-    [description appendString:@"--"];
+    [description appendString:@">"];
     
      return description;
 }
