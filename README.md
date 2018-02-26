@@ -114,9 +114,6 @@ Setup the following keywords for your catalog to make Poedit work with your sour
 
 ```
 _
-_x:2c,1
-_n:1,2
-_nx:4c,1,2
 POLocalizedString
 POLocalizedStringFromContext:2c,1
 POLocalizedPluralString:3c,1,2
