@@ -15,8 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var versionLabel: UILabel!
-    
-    var bundle: Bundle!
 
     override func viewDidLoad() {
         super.viewDidLoad()

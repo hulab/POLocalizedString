@@ -92,7 +92,7 @@ If you use Poedit, follow the instructions below to setup Objective-C parser.
 Go to Poedit > Preferences and add new parser with the following settings:
 
 - List of extensions:
-`*.m;*.mm;*.c;*.h;`
+`*.m;*.mm;*.h;*.swift;`
 
 - Parser command:
 `xgettext --force-po -o %o %C %K %F -L ObjectiveC`

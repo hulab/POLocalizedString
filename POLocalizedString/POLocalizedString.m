@@ -180,6 +180,16 @@ static NSBundle *localizedBundle = nil;
         }
     }
     
+    NSString *language = [self objectForInfoDictionaryKey:(__bridge NSString *)kCFBundleDevelopmentRegionKey];
+    if (language) {
+        NSArray *match = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self BEGINSWITH[c] %@", language]];
+        
+        if (match.count) {
+            self.language = language;
+            return match.firstObject;
+        }
+    }
+    
     return nil;
 }
 

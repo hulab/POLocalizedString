@@ -16,10 +16,7 @@
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
-@property (strong, nonatomic) NSBundle *bundle;
-
 @end
-
 
 @implementation ViewController
 
@@ -27,17 +24,17 @@
     [super viewDidLoad];
     
     /// Title label
-    self.titleLabel.text = POLocalizedStringInBundle(self.bundle, @"Choose number of apples");
+    self.titleLabel.text = POLocalizedString(@"Choose number of apples");
     
     self.subTitleLabel.text = nil;
     
     NSString *systemVersion = UIDevice.currentDevice.systemVersion;
-    self.versionLabel.text = [NSString stringWithFormat:POLocalizedStringInBundle(self.bundle, @"iOS %s"), systemVersion.ascii];
+    self.versionLabel.text = [NSString stringWithFormat:POLocalizedString(@"iOS %s"), systemVersion];
 }
 
 - (IBAction)sliderValueDidChange:(id)sender {
     /// Sub-title with number of apples
-    NSString *format = POLocalizedPluralFormatInBundle(self.bundle, @"%i apple", @"%i apples", self.slider.value);
+    NSString *format = POLocalizedPluralFormat(@"%i apple", @"%i apples", self.slider.value);
     
     self.subTitleLabel.text = [NSString stringWithFormat:format, (int)self.slider.value];
 }
