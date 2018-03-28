@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
 
   s.name                 = 'POLocalizedString'
-  s.version              = '0.4.1'
+  s.version              = '1.0.0'
   s.license              = 'MIT'
-  s.homepage             = 'https://git.hulab.co/hulab/POLocalizedString'
-  s.authors              = { 'Maxime Epain' => 'maxime@mpastr.com' }
-  s.summary              = 'Gettext translations for iOS.'
-  s.source               = { :git => 'https://git.hulab.co/hulab/POLocalizedString.git', :tag => s.version.to_s, :submodules => true }
+  s.homepage             = 'https://github.com/hulab/POLocalizedString'
+  s.authors              = { 'Maxime Epain' => 'maxime.epain@gmail.com' }
+  s.summary              = 'Gettext for iOS/OS X/watchOS/tvOS'
+  s.source               = { :git => 'https://github.com/hulab/POLocalizedString.git', :tag => s.version.to_s, :submodules => true }
 
   s.source_files         = 'POLocalizedString/*.{h,m,mm,swift}', 'muParser/src/*.cpp', 'muParser/include/*.h'
   s.exclude_files        = 'muParser/src/muParserTest.cpp', 'muParser/src/muParserTest.h'
