@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSString *context;
 @property (nonatomic, strong, nullable) NSString *msgid;
 @property (nonatomic, strong, nullable) NSString *msgid_plural;
-@property (nonatomic, strong) NSMutableArray *translations;
+@property (nonatomic, strong) NSMutableArray<NSString *> *translations;
 @property (nonatomic, strong, nullable) NSString *translator_comments;
 @property (nonatomic, strong, nullable) NSString *extracted_comments;
 @property (nonatomic, strong) NSMutableArray *references;

@@ -25,8 +25,8 @@
 #import "muParserInt.h"
 
 @implementation Gettext {
-    NSMutableDictionary *_entries;
-    NSMutableDictionary *_headers;
+    NSMutableDictionary<NSString *, POEntry *> *_entries;
+    NSMutableDictionary<NSString *, NSString *> *_headers;
 	mu::ParserInt * muParser;
 }
 
@@ -71,6 +71,21 @@
 - (POEntry *)entryWithMsgId:(NSString *)msgid context:(NSString *)context {
     NSString *key = [POEntry keyWithMsgid:msgid context:context];
     return _entries[key];
+}
+
+- (nullable NSString *)msgstrForMsgid:(NSString *)msgid context:(nullable NSString *)context {
+    NSString *key = [POEntry keyWithMsgid:msgid context:context];
+    return _entries[key].translations.firstObject;
+}
+
+- (nullable NSString *)msgstrForMsgid:(NSString *)msgid plural:(NSString *)msgid_plural count:(NSInteger)count context:(nullable NSString *)context {
+    NSString *key = [POEntry keyWithMsgid:msgid context:context];
+    NSUInteger index = [self selectPluralForm:count];
+    POEntry *entry = _entries[key];
+    if (entry.translations.count > index) {
+        return entry.translations[index];
+    }
+    return nil;
 }
 
 - (NSDictionary *)_scanPluralFormsString:(NSString *)src {

@@ -65,7 +65,17 @@ NSString *POLocalizedPluralFormatFromContextInBundle(NSBundle *bundle, NSString 
 
 @interface NSBundle ()
 
-@property (nonatomic, strong) Gettext *gettext;
+@property (nonatomic, strong) Gettext *source;
+
+@property (nonatomic, strong) Gettext *translation;
+
+@end
+
+@interface Gettext (Load)
+
++ (Gettext *)sourceFromBundle:(NSBundle *)bundle;
+
++ (Gettext *)translationFromBundle:(NSBundle *)bundle;
 
 @end
 
@@ -92,7 +102,7 @@ static NSBundle *localizedBundle = nil;
     objc_setAssociatedObject(self, @selector(language), language, OBJC_ASSOCIATION_RETAIN);
     
     // Reset gettext
-    objc_setAssociatedObject(self, @selector(gettext), nil, OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(self, @selector(translation), nil, OBJC_ASSOCIATION_RETAIN);
 }
 
 - (id<POFormat>)format {
@@ -108,113 +118,57 @@ static NSBundle *localizedBundle = nil;
     objc_setAssociatedObject(self, @selector(format), format, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (Gettext *)gettext {
-    Gettext *gettext = objc_getAssociatedObject(self, @selector(gettext));
-    
-    if (!gettext) {
-        
-        NSString *file = [self localizedFile];
-        NSString *path = [self.resourcePath stringByAppendingPathComponent:file];
-        
-        if ([file hasSuffix:@".mo"]) {
-            gettext = [MOParser loadFile:path];
-        } else if([file hasSuffix:@".po"]) {
-            gettext = [POParser loadFile:path];
-        } else {
-            gettext = [[Gettext alloc] init];
-        }
-        
-        objc_setAssociatedObject(self, @selector(gettext), gettext, OBJC_ASSOCIATION_RETAIN);
+- (Gettext *)source {
+    Gettext *source = objc_getAssociatedObject(self, @selector(source));
+
+    if (!source) {
+        source = [Gettext sourceFromBundle:self];
+        objc_setAssociatedObject(self, @selector(source), source, OBJC_ASSOCIATION_RETAIN);
     }
-    
-    return gettext;
+
+    return source;
 }
 
-- (NSString *)localizedFile {
-    NSFileManager *manager = [NSFileManager defaultManager];
+- (Gettext *)translation {
+    Gettext *translation = objc_getAssociatedObject(self, @selector(translation));
     
-    NSError *error = nil;
-    NSArray<NSString *> *files = [manager contentsOfDirectoryAtPath:self.resourcePath error:&error];
-    if (!files) {
-        NSLog(@"Error: %@", error);
-        return nil;
+    if (!translation) {
+        translation = [Gettext translationFromBundle:self];
+        objc_setAssociatedObject(self, @selector(translation), translation, OBJC_ASSOCIATION_RETAIN);
     }
     
-    files = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self ENDSWITH '.mo' OR self ENDSWITH '.po'"]];
-    
-    // First check for the specified language.
-    if (self.language) {
-        
-        NSString *file = [NSString stringWithFormat:@"%@.%@", self.language, @"mo"];
-        if ([files containsObject:file]) {
-            return file;
-        }
-        
-        file = [NSString stringWithFormat:@"%@.%@", self.language, @"po"];
-        if ([files containsObject:file]) {
-            return file;
-        }
-        
-        NSLog(@"The specified language is not available");
-    }
-    
-    // Iterate through preferred languages to get a match.
-    for (NSString *language in NSLocale.preferredLanguages) {
-        NSString *iso = [language stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
-        
-        NSArray *match = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self BEGINSWITH[c] %@", iso]];
-        if (match.count) {
-            self.language = iso;
-            return match.firstObject;
-        }
-        
-        NSScanner *scanner = [[NSScanner alloc] initWithString:iso];
-        if(![scanner scanUpToString:@"_" intoString:&iso]) {
-            continue;
-        }
-        
-        match = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self BEGINSWITH[c] %@", iso]];
-        if (match.count) {
-            self.language = iso;
-            return match.firstObject;
-        }
-    }
-    
-    NSString *language = [self objectForInfoDictionaryKey:(__bridge NSString *)kCFBundleDevelopmentRegionKey];
-    if (language) {
-        NSArray *match = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self BEGINSWITH[c] %@", language]];
-        
-        if (match.count) {
-            self.language = language;
-            return match.firstObject;
-        }
-    }
-    
-    return nil;
+    return translation;
 }
 
 - (NSString *)localizedStringForMsgid:(NSString *)msgid context:(nullable NSString *)context {
-    NSString *string = msgid;
-    
-    POEntry *entry = [self.gettext entryWithMsgId:msgid context:context];
-    if(entry != nil && entry.translations.count) {
-        string = entry.translations.firstObject;
+
+    NSString *translation = [self.translation msgstrForMsgid:msgid context:context];
+    if (translation && translation.length > 0) {
+        return [self.format convertString:translation];
+    }
+
+    translation = [self.source msgstrForMsgid:msgid context:context];
+    if (translation && translation.length > 0) {
+        return [self.format convertString:translation];
     }
     
-    return [self.format convertString:string];
+    return [self.format convertString:msgid];
 }
 
 - (NSString *)localizedFormatForMsgid:(NSString *)msgid plural:(NSString *)msgid_plural count:(NSInteger)count context:(nullable NSString *)context {
-    NSString *string = count == 1 ? msgid : msgid_plural;
-    
-    POEntry *entry = [self.gettext entryWithMsgId:msgid context:context];
-    NSUInteger index = [self.gettext selectPluralForm:count];
-    
-    if(entry != nil && index < self.gettext.numPlurals && index < entry.translations.count) {
-        string = entry.translations[index];
+
+    NSString *translation = [self.translation msgstrForMsgid:msgid plural:msgid_plural count:count context:context];
+    if (translation && translation.length > 0) {
+        return [self.format convertString:translation];
     }
-    
-    return [self.format convertString:string];
+
+    translation = [self.source msgstrForMsgid:msgid plural:msgid_plural count:count context:context];
+    if (translation && translation.length > 0) {
+        return [self.format convertString:translation];
+    }
+
+    translation = count == 1 ? msgid : msgid_plural;
+    return [self.format convertString:translation];
 }
 
 @end
@@ -264,6 +218,102 @@ static NSBundle *localizedBundle = nil;
 - (instancetype)initWithMsgid:(NSString *)msgid arguments:(va_list)argList bundle:(NSBundle *)bundle context:(NSString *)context {
     NSString *format = [bundle localizedStringForMsgid:msgid context:context];
     return [self initWithFormat:format arguments:argList];
+}
+
+@end
+
+@implementation Gettext (Load)
+
++ (Gettext *)gettext:(NSString *)file {
+    if ([file hasSuffix:@".mo"]) {
+        return [MOParser loadFile:file];
+    }
+    if([file hasSuffix:@".po"]) {
+        return [POParser loadFile:file];
+    }
+    return [[Gettext alloc] init];
+}
+
++ (Gettext *)sourceFromBundle:(NSBundle *)bundle {
+    NSFileManager *manager = [NSFileManager defaultManager];
+
+    NSError *error = nil;
+    NSArray<NSString *> *files = [manager contentsOfDirectoryAtPath:bundle.resourcePath error:&error];
+    if (!files) {
+        NSLog(@"Error: %@", error);
+        return nil;
+    }
+
+    files = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self ENDSWITH '.mo' OR self ENDSWITH '.po'"]];
+
+    NSString *language = [bundle objectForInfoDictionaryKey:(__bridge NSString *)kCFBundleDevelopmentRegionKey];
+    if (language) {
+        NSArray *match = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self BEGINSWITH[c] %@", language]];
+
+        if (match.count) {
+            NSString *file = [bundle.resourcePath stringByAppendingPathComponent:match.firstObject];
+            return [self gettext:file];
+        }
+    }
+
+    return nil;
+}
+
++ (Gettext *)translationFromBundle:(NSBundle *)bundle {
+    NSFileManager *manager = [NSFileManager defaultManager];
+    
+    NSError *error = nil;
+    NSArray<NSString *> *files = [manager contentsOfDirectoryAtPath:bundle.resourcePath error:&error];
+    if (!files) {
+        NSLog(@"Error: %@", error);
+        return nil;
+    }
+    
+    files = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self ENDSWITH '.mo' OR self ENDSWITH '.po'"]];
+    
+    // First check for the specified language.
+    if (bundle.language) {
+        
+        NSString *file = [NSString stringWithFormat:@"%@.%@", bundle.language, @"mo"];
+        if ([files containsObject:file]) {
+            file = [bundle.resourcePath stringByAppendingPathComponent:file];
+            return [self gettext:file];
+        }
+        
+        file = [NSString stringWithFormat:@"%@.%@", bundle.language, @"po"];
+        if ([files containsObject:file]) {
+            file = [bundle.resourcePath stringByAppendingPathComponent:file];
+            return [self gettext:file];
+        }
+        
+        NSLog(@"The specified language is not available");
+    }
+    
+    // Iterate through preferred languages to get a match.
+    for (NSString *language in NSLocale.preferredLanguages) {
+        NSString *iso = [language stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
+        
+        NSArray *match = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self BEGINSWITH[c] %@", iso]];
+        if (match.count) {
+            bundle.language = iso;
+            NSString *file = [bundle.resourcePath stringByAppendingPathComponent:match.firstObject];
+            return [self gettext:file];
+        }
+        
+        NSScanner *scanner = [[NSScanner alloc] initWithString:iso];
+        if(![scanner scanUpToString:@"_" intoString:&iso]) {
+            continue;
+        }
+        
+        match = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self BEGINSWITH[c] %@", iso]];
+        if (match.count) {
+            bundle.language = iso;
+            NSString *file = [bundle.resourcePath stringByAppendingPathComponent:match.firstObject];
+            return [self gettext:file];
+        }
+    }
+    
+    return nil;
 }
 
 @end

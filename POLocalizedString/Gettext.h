@@ -83,6 +83,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable POEntry *)entryWithMsgId:(NSString *)msgid context:(nullable NSString *)context;
 
+- (nullable NSString *)msgstrForMsgid:(NSString *)msgid context:(nullable NSString *)context;
+
+- (nullable NSString *)msgstrForMsgid:(NSString *)msgid plural:(NSString *)msgid_plural count:(NSInteger)count context:(nullable NSString *)context;
+
 @end
 
 NS_ASSUME_NONNULL_END

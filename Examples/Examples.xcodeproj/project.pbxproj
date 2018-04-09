@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		49ADFE9683847794CAA01CB2 /* Pods_Example_objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14165926E30507D48646F14 /* Pods_Example_objc.framework */; };
 		6D4C9E4251A56D72B7D0B5FC /* Pods_Example_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5375D98CC087160CFB160E /* Pods_Example_swift.framework */; };
+		9C323C10207BA1C00088598D /* en.mo in Resources */ = {isa = PBXBuildFile; fileRef = 9C323C0E207BA1BF0088598D /* en.mo */; };
+		9C323C11207BA1C00088598D /* en.po in Resources */ = {isa = PBXBuildFile; fileRef = 9C323C0F207BA1C00088598D /* en.po */; };
 		9CCF00041FD59559007F965D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFFFA1FD59559007F965D /* AppDelegate.m */; };
 		9CCF00051FD59559007F965D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CCFFFFB1FD59559007F965D /* Assets.xcassets */; };
 		9CCF00061FD59559007F965D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CCFFFFC1FD59559007F965D /* LaunchScreen.storyboard */; };
@@ -64,6 +66,8 @@
 /* Begin PBXFileReference section */
 		1D4BA55CAF9DA05703787D64 /* Pods-Example-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-swift/Pods-Example-swift.release.xcconfig"; sourceTree = "<group>"; };
 		97EC68F1F019E98FCF0D51E6 /* Pods-Example-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example-swift/Pods-Example-swift.debug.xcconfig"; sourceTree = "<group>"; };
+		9C323C0E207BA1BF0088598D /* en.mo */ = {isa = PBXFileReference; lastKnownFileType = file; path = en.mo; sourceTree = "<group>"; };
+		9C323C0F207BA1C00088598D /* en.po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = en.po; sourceTree = "<group>"; };
 		9CCF00001FD59559007F965D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CCF00011FD59559007F965D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CCF00021FD59559007F965D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				9CCF00401FD598E4007F965D /* L10n.h */,
+				9C323C0E207BA1BF0088598D /* en.mo */,
+				9C323C0F207BA1C00088598D /* en.po */,
 				9CEBA80B1FDF311F00F8F211 /* fr.mo */,
 				9CEFAA231FD8427400A5E40F /* fr.po */,
 				9CEFAA261FD84D7B00A5E40F /* ru.mo */,
@@ -336,6 +342,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C323C10207BA1C00088598D /* en.mo in Resources */,
+				9C323C11207BA1C00088598D /* en.po in Resources */,
 				9CEBA80C1FDF312000F8F211 /* fr.mo in Resources */,
 				9CEFAA281FD84D7B00A5E40F /* ru.mo in Resources */,
 			);
