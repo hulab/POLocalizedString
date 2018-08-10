@@ -48,7 +48,7 @@
     Gettext *gettext = [[Gettext alloc] init];
     NSArray *paragraphs = [content componentsSeparatedByString:@"\n\n"];
 
-    NSString *header = paragraphs.firstObject;
+    NSString *header = [paragraphs.firstObject stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
 
     NSArray *lines = [header componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     NSString *key = nil;
