@@ -48,7 +48,7 @@
     Gettext *gettext = [[Gettext alloc] init];
     NSArray *paragraphs = [content componentsSeparatedByString:@"\n\n"];
 
-    NSString *header = [paragraphs.firstObject stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+    NSString *header = [paragraphs.firstObject stringByReplacingOccurrencesOfString:@"\\n" withString:@"\\n\"\n\""];
 
     NSArray *lines = [header componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     NSString *key = nil;
@@ -66,6 +66,10 @@
             NSString *comment = [line substringWithRange:NSMakeRange(1, line.length - 2)];
             NSArray<NSString *> *arr = [comment splitByString:@":"];
 
+            if (arr.count == 0) {
+                continue;
+            }
+            
             NSString *str = [arr.firstObject.decodePO stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 
             if(arr.count < 2) {
