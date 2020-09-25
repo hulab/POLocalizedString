@@ -441,9 +441,8 @@
 				9CCFFF881FD59244007F965D /* muParserToken.h */,
 				9CCFFF891FD59244007F965D /* muParserTokenReader.h */,
 			);
-			name = include;
-			path = muParser/include;
-			sourceTree = SOURCE_ROOT;
+			path = include;
+			sourceTree = "<group>";
 		};
 		9CCFFF8A1FD59244007F965D /* src */ = {
 			isa = PBXGroup;
@@ -458,9 +457,8 @@
 				9CCFFF921FD59244007F965D /* muParserTest.cpp */,
 				9CCFFF931FD59244007F965D /* muParserTokenReader.cpp */,
 			);
-			name = src;
-			path = muParser/src;
-			sourceTree = SOURCE_ROOT;
+			path = src;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -1230,6 +1228,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1289,6 +1288,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
