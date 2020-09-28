@@ -42,7 +42,7 @@ typedef struct _mo_position {
 
 @implementation MOParser
 
-+ (nullable Gettext *)loadFile:(NSString *)path; {
++ (nullable Gettext *)loadFile:(NSString *)path {
 	POEntry *entry;
 	mo_header mo;
 	mo_position *originals = NULL,
