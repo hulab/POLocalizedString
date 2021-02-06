@@ -288,7 +288,13 @@ static NSBundle *localizedBundle = nil;
         
         NSLog(@"The specified language is not available");
     }
-    
+
+    // Find out what is the 'developent language', i.e. in what language are the
+    // source strings in.
+    NSString *developmentLanguage = [bundle objectForInfoDictionaryKey:(__bridge NSString *)kCFBundleDevelopmentRegionKey];
+
+    NSString *mostPreferredLang = [NSLocale componentsFromLocaleIdentifier:[NSLocale.preferredLanguages firstObject]][NSLocaleLanguageCode];
+
     // Iterate through preferred languages to get a match.
     for (NSString *language in NSLocale.preferredLanguages) {
         NSString *iso = [language stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
@@ -310,6 +316,16 @@ static NSBundle *localizedBundle = nil;
             bundle.language = iso;
             NSString *file = [bundle.resourcePath stringByAppendingPathComponent:match.firstObject];
             return [self gettext:file];
+        }
+
+        // In case we didn't find a suitable translation on the first iteration,
+        // AND the most preferred language is our development language (often English),
+        // then we should stop iterating and just use the development language without
+        // a translation file. Otherwise we'd get translations for our
+        // second-most-preferred language (or third, etc.), overriding original
+        // strings that are in the most preferred language.
+        if ([mostPreferredLang isEqual:developmentLanguage]) {
+            return nil;
         }
     }
     
