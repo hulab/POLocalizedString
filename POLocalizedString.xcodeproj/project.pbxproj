@@ -586,9 +586,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C5A2A6C1FE91BC600DEED01 /* Build configuration list for PBXNativeTarget "POLocalizedString watchOS" */;
 			buildPhases = (
+				9C5A2A641FE91BC600DEED01 /* Headers */,
 				9C5A2A621FE91BC600DEED01 /* Sources */,
 				9C5A2A631FE91BC600DEED01 /* Frameworks */,
-				9C5A2A641FE91BC600DEED01 /* Headers */,
 				9C5A2A651FE91BC600DEED01 /* Resources */,
 			);
 			buildRules = (
@@ -604,9 +604,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C5A2ACF1FE921CF00DEED01 /* Build configuration list for PBXNativeTarget "POLocalizedString macOS" */;
 			buildPhases = (
+				9C5A2AC71FE921CF00DEED01 /* Headers */,
 				9C5A2AC51FE921CF00DEED01 /* Sources */,
 				9C5A2AC61FE921CF00DEED01 /* Frameworks */,
-				9C5A2AC71FE921CF00DEED01 /* Headers */,
 				9C5A2AC81FE921CF00DEED01 /* Resources */,
 			);
 			buildRules = (
@@ -658,9 +658,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C5A2B401FE92CF500DEED01 /* Build configuration list for PBXNativeTarget "POLocalizedString tvOS" */;
 			buildPhases = (
+				9C5A2B381FE92CF500DEED01 /* Headers */,
 				9C5A2B361FE92CF500DEED01 /* Sources */,
 				9C5A2B371FE92CF500DEED01 /* Frameworks */,
-				9C5A2B381FE92CF500DEED01 /* Headers */,
 				9C5A2B391FE92CF500DEED01 /* Resources */,
 			);
 			buildRules = (
@@ -676,9 +676,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CCFFF431FD58E12007F965D /* Build configuration list for PBXNativeTarget "POLocalizedString iOS" */;
 			buildPhases = (
+				9CCFFF2C1FD58E12007F965D /* Headers */,
 				9CCFFF2A1FD58E12007F965D /* Sources */,
 				9CCFFF2B1FD58E12007F965D /* Frameworks */,
-				9CCFFF2C1FD58E12007F965D /* Headers */,
 				9CCFFF2D1FD58E12007F965D /* Resources */,
 			);
 			buildRules = (
